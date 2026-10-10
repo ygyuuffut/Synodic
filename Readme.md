@@ -6,4 +6,4 @@ This repository intends to host Synodic core dependency releases while provides 
 
 ## Getting Started
 
-Refer to "THEIA", the all-in-one packager dedicated for the STG html game, which includes the modding services
+Refer to [Theia](https://github.com/ygyuuffut/Theia), the all-in-one packager dedicated for the STG html game, which includes the modding services
