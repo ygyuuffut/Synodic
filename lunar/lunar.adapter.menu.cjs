@@ -1,0 +1,2 @@
+/* Source labels map to semantic menu roles; callback ownership is unchanged. */
+(function(){'use strict';LUNAR.adapter.menu={action:function(text){var value=String(text).replace(/[▶📖⚙📜✕📂📁\uFE0F]/gu,'').trim();var rules=[[/^Continue/i,'continue'],[/^New Run/i,'new-run'],[/^Load/i,'load'],[/^(Play|Start Run)/i,'start'],[/^Compendium/i,'compendium'],[/^Settings/i,'settings'],[/^Credits/i,'credits'],[/^Quit/i,'quit']];var match=rules.find(function(r){return r[0].test(value);});return match?match[1]:null;}};})();

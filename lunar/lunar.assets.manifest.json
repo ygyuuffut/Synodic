@@ -1,0 +1,70 @@
+{
+  "schema": 1,
+  "profiles": {
+    "mobile": {
+      "available": true
+    },
+    "desktop": {
+      "available": false
+    }
+  },
+  "lowerWidth": 700,
+  "upperWidth": 900,
+  "stabilityMs": 750,
+  "timeoutMs": 8000,
+  "assets": [
+    {
+      "id": "menu.background",
+      "source": "https://static.wixstatic.com/media/9f3336_17d5f4c84a4c4240aee4c004cc7193ab~mv2.png",
+      "pack": "menu",
+      "critical": true,
+      "readiness": "important",
+      "kind": "cg",
+      "profiles": {
+        "mobile": "https://static.wixstatic.com/media/9f3336_17d5f4c84a4c4240aee4c004cc7193ab~mv2.png"
+      },
+      "failurePolicy": "continue"
+    },
+    {
+      "id": "map.background",
+      "source": "https://static.wixstatic.com/media/9f3336_654f4f2c4c834193bcb2109cbd16e78c~mv2.png",
+      "pack": "map",
+      "critical": false,
+      "readiness": "important",
+      "kind": "cg",
+      "profiles": {
+        "mobile": "https://static.wixstatic.com/media/9f3336_654f4f2c4c834193bcb2109cbd16e78c~mv2.png"
+      },
+      "failurePolicy": "continue"
+    }
+  ],
+  "packs": [
+    "critical",
+    "menu",
+    "common",
+    "map",
+    "combat",
+    "story",
+    "shop",
+    "deferred"
+  ],
+  "initialScene": "menu",
+  "decodeTimeoutMs": 1500,
+  "qualityPolicy": {
+    "classificationDeadlineMs": 1200,
+    "ultraMbps": 25,
+    "ultraLatencyMs": 120,
+    "highMbps": 8,
+    "highLatencyMs": 250,
+    "mediumMbps": 1.5,
+    "severeLatencyMs": 900,
+    "degradationMs": 5000,
+    "downgradeSamples": 2,
+    "animationDeadlineMs": 2500
+  },
+  "backgrounds": {
+    "map.stomach.background": {
+      "static": "https://static.wixstatic.com/media/9f3336_7b810a4c88e2403d81b98a3008a7eae1~mv2.png"
+    }
+  }
+}

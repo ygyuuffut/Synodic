@@ -1,0 +1,9 @@
+# Linear width AND height percentages, relative to original artwork.
+# Edit and re-inject the HTML; no metadata download is necessary.
+# Small icons/chrome/fonts are unaffected. Original always uses upstream art.
+# Values: 1–100, nondecreasing from Fast to Ultra; decimals are allowed.
+[resolution_percent]
+fast = 50
+standard = 70
+fancy = 85
+ultra = 100

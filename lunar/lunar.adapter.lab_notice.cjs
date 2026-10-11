@@ -1,0 +1,2 @@
+/* Lab availability notice data. No terminal-ending or UI policy. */
+(function(){'use strict';window.LUNAR.adapter.labNotice=function(record,copy){return {schema:1,id:record.id,scope:record.scope,scene:record.scene,kind:record.kind,title:String(copy.title||''),subtitle:String(copy.subtitle||''),body:String(copy.body||''),closeLabel:String(copy.closeLabel||'Close'),confirmLabel:copy.confirmLabel?String(copy.confirmLabel):null,confirmDisabled:!!copy.confirmDisabled,closeDisabled:!!copy.closeDisabled};};})();

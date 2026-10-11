@@ -1,0 +1,9 @@
+[mod]
+mod.title = "Synodic Lunar"
+mod.author = "M.N. Tristone (弎石)"
+mod.description =    """
+                        A Synodic Core Dependency
+                        The Synodic Modding API
+                        Designed for STG
+                        """
+mod.api.version = "1.0"

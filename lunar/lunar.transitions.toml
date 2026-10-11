@@ -1,0 +1,8 @@
+# Edit these milliseconds and rebuild the HTML. LUNAR publishes data only;
+# MOONSHINE owns the timers, fades and opaque commit barrier.
+[presentation]
+decision_ms = 100
+min_loading_ms = 150
+fade_to_black_ms = 50
+fade_from_black_ms = 50
+background_crossfade_ms = 200

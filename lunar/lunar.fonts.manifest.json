@@ -1,0 +1,185 @@
+{
+  "schema": 1,
+  "roles": {
+    "ui": {
+      "family": "\"SYNODIC Ui\",system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif",
+      "resources": [
+        "font.ui"
+      ],
+      "classification": "critical"
+    },
+    "display": {
+      "family": "\"SYNODIC Ui\",system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif",
+      "resources": [
+        "font.ui"
+      ],
+      "classification": "critical"
+    },
+    "mono": {
+      "family": "\"SYNODIC Mono\",\"MOONSHINE Loading Mono\",ui-monospace,monospace",
+      "resources": [
+        "font.mono"
+      ],
+      "classification": "deferred"
+    },
+    "emoji": {
+      "family": "\"SYNODIC Emoji\",\"SYNODIC Symbol\",\"SYNODIC Symbol2\",sans-serif",
+      "resources": [
+        "font.emoji",
+        "font.symbol",
+        "font.symbol2"
+      ],
+      "classification": "deferred"
+    },
+    "symbol": {
+      "family": "\"SYNODIC Symbol\",\"SYNODIC Symbol2\",sans-serif",
+      "resources": [
+        "font.symbol",
+        "font.symbol2"
+      ],
+      "classification": "deferred"
+    },
+    "symbol2": {
+      "family": "\"SYNODIC Symbol2\",sans-serif",
+      "resources": [
+        "font.symbol2"
+      ],
+      "classification": "deferred"
+    },
+    "system": {
+      "family": "Roboto,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif",
+      "resources": [],
+      "classification": "system"
+    }
+  },
+  "resources": [
+    {
+      "id": "font.ui",
+      "family": "SYNODIC Ui",
+      "aliases": [
+        "Noto Sans",
+        "Cinzel",
+        "Crimson Pro",
+        "Georgia",
+        "Helmet",
+        "Freesans",
+        "serif",
+        "sans-serif"
+      ],
+      "role": "ui",
+      "kind": "embedded",
+      "file": "assets/fonts/ui.woff2",
+      "weight": "400 700",
+      "critical": true,
+      "profiles": [
+        "common"
+      ],
+      "sample": "Aa09",
+      "license": "assets/fonts/Noto-Sans-LICENSE.txt"
+    },
+    {
+      "id": "font.mono",
+      "family": "SYNODIC Mono",
+      "aliases": [
+        "JetBrains Mono",
+        "Consolas",
+        "Courier New",
+        "monospace"
+      ],
+      "role": "mono",
+      "kind": "embedded",
+      "file": "assets/fonts/mono.woff2",
+      "weight": "400 800",
+      "critical": false,
+      "profiles": [
+        "common"
+      ],
+      "sample": "Aa09",
+      "license": "assets/fonts/JetBrains-Mono-LICENSE.txt"
+    },
+    {
+      "id": "font.emoji",
+      "family": "SYNODIC Emoji",
+      "aliases": [
+        "Noto Emoji"
+      ],
+      "role": "emoji",
+      "kind": "embedded",
+      "file": "assets/fonts/emoji.woff2",
+      "weight": "400",
+      "critical": false,
+      "profiles": [
+        "common"
+      ],
+      "sample": "\u2665\u2714\ud83d\udce1",
+      "license": "assets/fonts/Noto-Emoji-LICENSE.txt"
+    },
+    {
+      "id": "font.symbol",
+      "family": "SYNODIC Symbol",
+      "aliases": [
+        "Noto Sans Symbols"
+      ],
+      "role": "symbol",
+      "kind": "embedded",
+      "file": "assets/fonts/symbol.woff2",
+      "weight": "400",
+      "critical": false,
+      "profiles": [
+        "common"
+      ],
+      "sample": "\u25c0\u25b6",
+      "license": "assets/fonts/Noto-Symbols-LICENSE.txt"
+    },
+    {
+      "id": "font.symbol2",
+      "family": "SYNODIC Symbol2",
+      "aliases": [
+        "Noto Sans Symbols 2"
+      ],
+      "role": "symbol2",
+      "kind": "embedded",
+      "file": "assets/fonts/symbol2.woff2",
+      "weight": "400",
+      "critical": false,
+      "profiles": [
+        "common"
+      ],
+      "sample": "\u25c0\u25b6",
+      "license": "assets/fonts/Noto-Symbols2-LICENSE.txt"
+    }
+  ],
+  "externalResources": [
+    {
+      "id": "font.bootstrap.mono",
+      "family": "MOONSHINE Loading Mono",
+      "classification": "critical",
+      "kind": "bootstrap",
+      "profiles": [
+        "common"
+      ]
+    },
+    {
+      "id": "font.bootstrap.moons",
+      "family": "MOONSHINE Loading Moons",
+      "classification": "critical",
+      "kind": "bootstrap",
+      "profiles": [
+        "common"
+      ]
+    },
+    {
+      "id": "font.native.icons",
+      "family": "tme-fa-icons",
+      "classification": "deferred",
+      "kind": "native-embedded",
+      "profiles": [
+        "common"
+      ]
+    }
+  ],
+  "nativeImportFamilies": [
+    "Cinzel",
+    "Crimson+Pro"
+  ]
+}
