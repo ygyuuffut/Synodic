@@ -1,0 +1,117 @@
+{
+  "family": "Material Symbols Outlined",
+  "axes": {
+    "opsz": 24,
+    "wght": 400,
+    "FILL": 0,
+    "GRAD": 0
+  },
+  "license": "Apache-2.0",
+  "icons": [
+    {
+      "name": "login",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/login/materialsymbolsoutlined/login_24px.svg",
+      "bytes": 259,
+      "sha256": "e402155f7e7f692b49929748ab7a7fbc8e14a94ff5133d14367820140388c114",
+      "viewBox": "0 -960 960 960"
+    },
+    {
+      "name": "logout",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/logout/materialsymbolsoutlined/logout_24px.svg",
+      "bytes": 258,
+      "sha256": "6d43fb408a015dc2879dfc0e30e55e83e7a686011e482fccde5d5f754be861aa",
+      "viewBox": "0 -960 960 960"
+    },
+    {
+      "name": "format_align_justify",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/format_align_justify/materialsymbolsoutlined/format_align_justify_24px.svg",
+      "bytes": 218,
+      "sha256": "42951d06f9394a89f322e074dc44ad2f6f549991fbcaedc8d1be54beac7faed9",
+      "viewBox": "0 -960 960 960"
+    },
+    {
+      "name": "swords",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/swords/materialsymbolsoutlined/swords_24px.svg",
+      "bytes": 577,
+      "sha256": "e4ed16090eaf812f5258ca0d0aec1ea0a9f02d4d89b5a08923c250d6b2644011",
+      "viewBox": "0 -960 960 960"
+    },
+    {
+      "name": "crown",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/crown/materialsymbolsoutlined/crown_24px.svg",
+      "bytes": 544,
+      "sha256": "0f73eb7347f1e4d94f5cae617c5dd72c46b1fd97f2548c08fdd305cb7b30d992",
+      "viewBox": "0 -960 960 960"
+    },
+    {
+      "name": "not_listed_location",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/not_listed_location/materialsymbolsoutlined/not_listed_location_24px.svg",
+      "bytes": 654,
+      "sha256": "e2e1b59e094e4e0ba7e23937c34cf904e7b4354245e4062c4f22ffdcee459384",
+      "viewBox": "0 -960 960 960"
+    },
+    {
+      "name": "fmd_bad",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/fmd_bad/materialsymbolsoutlined/fmd_bad_24px.svg",
+      "bytes": 450,
+      "sha256": "646bb3b7fc4c659708f16ab31df5b378de08d6d26a6e4efbd3efaf4952acb329",
+      "viewBox": "0 -960 960 960"
+    },
+    {
+      "name": "bed",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/bed/materialsymbolsoutlined/bed_24px.svg",
+      "bytes": 495,
+      "sha256": "38ee965d0eedda086e8247e3f16d5247f81b4c4dcaec5d4ae0b8a2c099fdc5bd",
+      "viewBox": "0 -960 960 960"
+    },
+    {
+      "name": "settings_suggest",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/settings_suggest/materialsymbolsoutlined/settings_suggest_24px.svg",
+      "bytes": 1093,
+      "sha256": "f3a5e7a9b7d0557657233fd76b5162e3327a4f752d7a8357cb365a008a6020e1",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "name": "cyclone",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/cyclone/materialsymbolsoutlined/cyclone_24px.svg",
+      "bytes": 670,
+      "sha256": "f8c3b230cad42dfb26889889ddade6005b0ee3330cd56a643ece4559be84553e",
+      "viewBox": "0 -960 960 960"
+    },
+    {
+      "name": "verified_user",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/verified_user/materialsymbolsoutlined/verified_user_24px.svg",
+      "bytes": 322,
+      "sha256": "abd70cab16bbd9d08b455421d32d7fbb6aa5b24c87403ce0dd333109db313752",
+      "viewBox": "0 -960 960 960"
+    },
+    {
+      "name": "privacy_tip",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/privacy_tip/materialsymbolsoutlined/privacy_tip_24px.svg",
+      "bytes": 396,
+      "sha256": "07010f8f94b350d35694a1c835c261223ad84e74ab6e5c74852c4874ae8d7c21",
+      "viewBox": "0 -960 960 960"
+    },
+    {
+      "name": "shield_with_heart",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/shield_with_heart/materialsymbolsoutlined/shield_with_heart_24px.svg",
+      "bytes": 431,
+      "sha256": "8afeba875d832ab4465af3deb089314023ee2f7488e4f8b91391cbb6d1b1081a",
+      "viewBox": "0 -960 960 960"
+    },
+    {
+      "name": "poker_chip",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/poker_chip/materialsymbolsoutlined/poker_chip_24px.svg",
+      "bytes": 935,
+      "sha256": "0d17225a379062a5c911206875830e9bc40b28558050d2a3c6250ad0785eb22e",
+      "viewBox": "0 -960 960 960"
+    },
+    {
+      "name": "deployed_code",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/deployed_code/materialsymbolsoutlined/deployed_code_24px.svg",
+      "bytes": 395,
+      "sha256": "66e8b330ee102b6860f6de043e7a79ab278e3ac610cd99f5ea59633d526ac3c7",
+      "viewBox": "0 -960 960 960"
+    }
+  ]
+}
