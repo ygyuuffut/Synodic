@@ -1,0 +1,15 @@
+/* Summarize saved, isolated stage runs. Inclusive path times never summed. */
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const root=require('./helpers/synodic-test-paths.cjs').root,base=path.join(root,'builds/performance-b6.5');
+const stages=['00-before','01-capture','01b-capture-stable','02-render','03-actions','04-layout'];
+const median=xs=>{xs=xs.slice().sort((a,b)=>a-b);return xs[Math.floor(xs.length/2)];};
+const get=(r,key)=>r.stats[key+'.time']?.count||0;
+function summarize(report,mode){const rows=report.runs.filter(r=>r.name.startsWith('ab-card')&&r.mode===mode);assert(rows.length===3,'Expected three A/B repetitions');const times={};for(const k of new Set(rows.flatMap(r=>Object.keys(r.stats).filter(k=>k.endsWith('.time')))))times[k]=Object.fromEntries(['count','total','max','over4','over8','over16'].map(field=>[field,median(rows.map(r=>r.stats[k]?.[field]||0))]));return {raw:rows.map(r=>({capture:get(r,'LUNAR.game.capture'),copies:r.stats['LUNAR.buffer.copy.calls']||0,notify:get(r,'LUNAR.notify'),render:get(r,'MOONSHINE.runtime.render'),patch:get(r,'MOONSHINE.catalog.patch'),script:r.cdp.ScriptDuration*1000,gap:r.frames.max,state:r.state})),capture:median(rows.map(r=>get(r,'LUNAR.game.capture'))),copies:median(rows.map(r=>r.stats['LUNAR.buffer.copy.calls']||0)),notify:median(rows.map(r=>get(r,'LUNAR.notify'))),render:median(rows.map(r=>get(r,'MOONSHINE.runtime.render'))),patch:median(rows.map(r=>get(r,'MOONSHINE.catalog.patch'))),script:median(rows.map(r=>r.cdp.ScriptDuration*1000)),gap:median(rows.map(r=>r.frames.max)),layout:median(rows.map(r=>r.cdp.LayoutDuration*1000)),times};}
+if(fs.existsSync(path.join(base,'06-final-4x/report.json')))stages.push('06-final-4x');
+const result=stages.map(stage=>{const report=JSON.parse(fs.readFileSync(path.join(base,stage,'report.json')));assert.equal(report.throttle,4);return {stage,modes:Object.fromEntries(['read-only','no-notify','no-visible-dom','normal'].map(m=>[m,summarize(report,m)])),control:report.control,identity:report.runs.find(r=>r.name==='shop-balance-during-animation').identity};});
+fs.writeFileSync(path.join(base,'comparison.json'),JSON.stringify(result,null,2));
+const round=x=>Math.round(x);let md='| 階段（4× CPU，三次中位數） | capture | JSON copy | notify | render | visible patch | Script ms | 最長 rAF ms | Layout ms | render >4/8/16ms |\n|---|---:|---:|---:|---:|---:|---:|---:|---:|---|\n';
+for(const {stage,modes} of result){const r=modes.normal,t=r.times['MOONSHINE.runtime.render.time'];md+=`| ${stage} | ${r.capture} | ${r.copies} | ${r.notify} | ${r.render} | ${r.patch} | ${round(r.script)} | ${round(r.gap)} | ${round(r.layout)} | ${t.over4}/${t.over8}/${t.over16} |\n`;}
+md+='\n| 階段 | 模式 | capture | copy | notify | render | patch | Script ms | 最長 rAF ms |\n|---|---|---:|---:|---:|---:|---:|---:|---:|\n';
+for(const {stage,modes} of result)for(const [mode,r] of Object.entries(modes))md+=`| ${stage} | ${mode} | ${r.capture} | ${r.copies} | ${r.notify} | ${r.render} | ${r.patch} | ${round(r.script)} | ${round(r.gap)} |\n`;
+fs.writeFileSync(path.join(base,'tables.md'),md);console.log(md);
