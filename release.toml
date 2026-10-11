@@ -1,0 +1,13 @@
+# Public release settings. Runtime identity is synodic.build.toml.
+[release]
+version = "1.0.0-rc2"
+channel = "rc"
+repository = "ygyuuffut/Synodic"
+license = "GPL-3.0-or-later"
+
+[[games]]
+version = "0.2001"
+raw_sha256 = [
+  "0edabffcc6beefe3b90121835186ffe922d2bd047299155347362b3908f0bdc8",
+  "58fb30f8d4838006b41e338825ff3bb448709aeeb02bc560bf2f50c5da8532b7",
+]

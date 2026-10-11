@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "release_version": "1.0.0-rc2",
+  "components": [
+    {
+      "id": "lunar",
+      "core": true,
+      "title": "Synodic Lunar",
+      "author": "M.N. Tristone (弎石)",
+      "description": "A Synodic Core Dependency\nThe Synodic Modding API\nDesigned for STG",
+      "version": "1.0",
+      "apiVersion": "1.0",
+      "requiresApi": ""
+    },
+    {
+      "id": "moonshine",
+      "core": true,
+      "title": "Synodic Moonshine",
+      "author": "M.N. Tristone (弎石)",
+      "description": "A Synodic Core Dependency\nThe Synodic Default Appearance\nDesigned for STG",
+      "version": "1.0",
+      "apiVersion": "",
+      "requiresApi": ">=1.0"
+    }
+  ],
+  "toolchain": {
+    "packager": "Python >=3.11 (standard library)",
+    "optional_font_authoring": "fontTools + Brotli; prebuilt WOFF2 included",
+    "acceptance": "Node.js >=20 + Playwright + pngjs; Google Chrome and separate THEIA HTML"
+  },
+  "embedded_assets": [
+    {
+      "path": "assets/fonts/emoji.woff2",
+      "size": 29852,
+      "sha256": "2a2c9560b73854d83a9283a4f110a38019abd129778d9a37b43d187f52151555"
+    },
+    {
+      "path": "assets/fonts/loading-mono.woff2",
+      "size": 3964,
+      "sha256": "09a6b0e4042da6247619f713235c669ef8c65645f5365f16bf83b7746fe93e4a"
+    },
+    {
+      "path": "assets/fonts/loading-moons.woff2",
+      "size": 1668,
+      "sha256": "69d657340541e5cc50d10fa21369cf5eb985b5a3ebcf77748dfaf4655a2900e6"
+    },
+    {
+      "path": "assets/fonts/mono.woff2",
+      "size": 34324,
+      "sha256": "335db8d5a702afe8a2889d2dae27ce3d0b6ef6be08367c09e331ada2a68e3843"
+    },
+    {
+      "path": "assets/fonts/symbol.woff2",
+      "size": 13320,
+      "sha256": "aeff81e8a463f30d8f53adf85b279dc85328c2561678cce9b0d2595930e65d64"
+    },
+    {
+      "path": "assets/fonts/symbol2.woff2",
+      "size": 32132,
+      "sha256": "98718a11c8aab77d4922db9246d42b07788a3cafbed09a047725cc2fec46fd8f"
+    },
+    {
+      "path": "assets/fonts/ui.woff2",
+      "size": 40808,
+      "sha256": "af7a404952cc650e96b30961fae8921290b599a5060fc71ad727fd5829bbe6fc"
+    }
+  ],
+  "license_files": [
+    {
+      "path": "assets/fonts/JetBrains-Mono-LICENSE.txt",
+      "size": 4671,
+      "sha256": "1ef715a18d98d45a5c7b9ea8e6295934ae5ef2ccab614cce59fe73482b5d19e1"
+    },
+    {
+      "path": "assets/fonts/Material-Symbols-LICENSE.txt",
+      "size": 11357,
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    },
+    {
+      "path": "assets/fonts/Noto-Emoji-LICENSE.txt",
+      "size": 4723,
+      "sha256": "25a6862d975232cc1da802ba8c099c2d639ad6946ba03087fae2dfaa9a26f779"
+    },
+    {
+      "path": "assets/fonts/Noto-Sans-LICENSE.txt",
+      "size": 4396,
+      "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a"
+    },
+    {
+      "path": "assets/fonts/Noto-Symbols-LICENSE.txt",
+      "size": 4383,
+      "sha256": "b118dd41337806a5d4797052c77caf3bd096aed783e5eb21b4d11154351e1ac0"
+    },
+    {
+      "path": "assets/fonts/Noto-Symbols2-LICENSE.txt",
+      "size": 4383,
+      "sha256": "b118dd41337806a5d4797052c77caf3bd096aed783e5eb21b4d11154351e1ac0"
+    }
+  ],
+  "installer": {
+    "name": "THEIA",
+    "version": "1.0.0",
+    "bundled": false,
+    "injection_contract": "synodic-python-text-v1"
+  },
+  "original_game": {
+    "bundled": false,
+    "games": [
+      {
+        "version": "0.2001",
+        "raw_sha256": [
+          "0edabffcc6beefe3b90121835186ffe922d2bd047299155347362b3908f0bdc8",
+          "58fb30f8d4838006b41e338825ff3bb448709aeeb02bc560bf2f50c5da8532b7"
+        ]
+      }
+    ]
+  },
+  "private_mods_included": false
+}

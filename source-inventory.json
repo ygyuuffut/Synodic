@@ -1,0 +1,1936 @@
+{
+  "schema_version": 1,
+  "release_version": "1.0.0-rc2",
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 274,
+      "sha256": "71f1fef96cdcb24547654a0d4a08036a9514ff56fb0035d9f29ea461eb7e60bc"
+    },
+    {
+      "path": "AGENTS.md",
+      "size": 49361,
+      "sha256": "065945722cf337d5cf14d9a79235a514cbc41d8b77c1e9230bd47b120aaefd6b"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "size": 106047,
+      "sha256": "98ae2d758f774fc9706a7fcb17a137965ac649b3dda1579c4f491e7bb5178b78"
+    },
+    {
+      "path": "BUILD.md",
+      "size": 4610,
+      "sha256": "4a732ad15486d75866b4fb9b02d23b44de7e67492029bfe19539bf2a73cb5911"
+    },
+    {
+      "path": "COPYING",
+      "size": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "DEVELOPMENT.md",
+      "size": 249984,
+      "sha256": "275e5641f19d0bf36f8cc8d1f65ecd9601d231ae8b96c1a54cbc1d662846a028"
+    },
+    {
+      "path": "Dev_log.md",
+      "size": 227654,
+      "sha256": "ae230d8d513bdcc82f6410c8931e8b20a7a58d9a58bc47386519cc0c27c43974"
+    },
+    {
+      "path": "LICENSE.md",
+      "size": 938,
+      "sha256": "84cb9c1b5f096896f72a62db2f448eb61f3f9ae88d6cc5e0c9b5ba22692bf985"
+    },
+    {
+      "path": "README.en.md",
+      "size": 6884,
+      "sha256": "5be6179bb4a88b6fdcc281dc299f7deea844de1c57a882aaae9835dbff9290bf"
+    },
+    {
+      "path": "README.md",
+      "size": 11615,
+      "sha256": "f88a8794752c9449546209bef7c4e2d363c94367d81af9e4a9b6c77164c9ac62"
+    },
+    {
+      "path": "RELEASE_NOTES.md",
+      "size": 2270,
+      "sha256": "13003f80b80de39ea89c08770083d7a79e1264c1dd88c268c971c2deb2fa7c89"
+    },
+    {
+      "path": "Resource_load_strategy.md",
+      "size": 5778,
+      "sha256": "98fbce0d2d923ae8904afc2ccc582b0e1475d80e06a49c30d7edfaaa417f0e3c"
+    },
+    {
+      "path": "STORY_TRANSLATION.md",
+      "size": 1242,
+      "sha256": "62314f66b18cff0391bff50cfc19a0df6c6db1d8987454b002bb6dd9cd045a15"
+    },
+    {
+      "path": "TECHNICAL_DEBT.md",
+      "size": 2166,
+      "sha256": "c6c3178e6ccf59ccb60a23879370bda245431cf298093ebe68bcd7cd7686545a"
+    },
+    {
+      "path": "THIRD-PARTY-NOTICES.txt",
+      "size": 34988,
+      "sha256": "d4c2cc754f9746b5313b27b5a01ed41d834be97d2cb4e500ad4f919a73527309"
+    },
+    {
+      "path": "assets/fonts/JetBrains-Mono-LICENSE.txt",
+      "size": 4671,
+      "sha256": "1ef715a18d98d45a5c7b9ea8e6295934ae5ef2ccab614cce59fe73482b5d19e1"
+    },
+    {
+      "path": "assets/fonts/Material-Symbols-LICENSE.txt",
+      "size": 11357,
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    },
+    {
+      "path": "assets/fonts/Noto-Emoji-LICENSE.txt",
+      "size": 4723,
+      "sha256": "25a6862d975232cc1da802ba8c099c2d639ad6946ba03087fae2dfaa9a26f779"
+    },
+    {
+      "path": "assets/fonts/Noto-Sans-LICENSE.txt",
+      "size": 4396,
+      "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a"
+    },
+    {
+      "path": "assets/fonts/Noto-Symbols-LICENSE.txt",
+      "size": 4383,
+      "sha256": "b118dd41337806a5d4797052c77caf3bd096aed783e5eb21b4d11154351e1ac0"
+    },
+    {
+      "path": "assets/fonts/Noto-Symbols2-LICENSE.txt",
+      "size": 4383,
+      "sha256": "b118dd41337806a5d4797052c77caf3bd096aed783e5eb21b4d11154351e1ac0"
+    },
+    {
+      "path": "assets/fonts/emoji.woff2",
+      "size": 29852,
+      "sha256": "2a2c9560b73854d83a9283a4f110a38019abd129778d9a37b43d187f52151555"
+    },
+    {
+      "path": "assets/fonts/loading-mono.woff2",
+      "size": 3964,
+      "sha256": "09a6b0e4042da6247619f713235c669ef8c65645f5365f16bf83b7746fe93e4a"
+    },
+    {
+      "path": "assets/fonts/loading-moons.woff2",
+      "size": 1668,
+      "sha256": "69d657340541e5cc50d10fa21369cf5eb985b5a3ebcf77748dfaf4655a2900e6"
+    },
+    {
+      "path": "assets/fonts/mono.woff2",
+      "size": 34324,
+      "sha256": "335db8d5a702afe8a2889d2dae27ce3d0b6ef6be08367c09e331ada2a68e3843"
+    },
+    {
+      "path": "assets/fonts/sources/jetbrains-mono.ttf",
+      "size": 303144,
+      "sha256": "662a196d58f1183bf2d77428b6d5283fe3f45161ab021bea4036bc98e5cac016"
+    },
+    {
+      "path": "assets/fonts/sources/noto-emoji.ttf",
+      "size": 1998988,
+      "sha256": "fc37b1726ed9e8f4c35c96e858367b18dc4b012f202c59cca7b945a1a7ff5409"
+    },
+    {
+      "path": "assets/fonts/sources/noto-sans.ttf",
+      "size": 2049096,
+      "sha256": "bfb7bb691513f12e734dc346c03a03f784912432d7e3fa8e56efcf906fe86b3d"
+    },
+    {
+      "path": "assets/fonts/sources/noto-symbols.ttf",
+      "size": 375268,
+      "sha256": "4edafdf58df481177dbb4ed423c5883ffa5cb6b1d26c72c05d03ae3878a5cf2c"
+    },
+    {
+      "path": "assets/fonts/sources/noto-symbols2.ttf",
+      "size": 1228868,
+      "sha256": "f67f40c65f929f029827ab37cfdc4897dfd9ae3c28d9e98ba46e0d52e39eb97e"
+    },
+    {
+      "path": "assets/fonts/symbol.woff2",
+      "size": 13320,
+      "sha256": "aeff81e8a463f30d8f53adf85b279dc85328c2561678cce9b0d2595930e65d64"
+    },
+    {
+      "path": "assets/fonts/symbol2.woff2",
+      "size": 32132,
+      "sha256": "98718a11c8aab77d4922db9246d42b07788a3cafbed09a047725cc2fec46fd8f"
+    },
+    {
+      "path": "assets/fonts/ui.woff2",
+      "size": 40808,
+      "sha256": "af7a404952cc650e96b30961fae8921290b599a5060fc71ad727fd5829bbe6fc"
+    },
+    {
+      "path": "assets/icons/map/bed.svg",
+      "size": 495,
+      "sha256": "38ee965d0eedda086e8247e3f16d5247f81b4c4dcaec5d4ae0b8a2c099fdc5bd"
+    },
+    {
+      "path": "assets/icons/map/crown.svg",
+      "size": 544,
+      "sha256": "0f73eb7347f1e4d94f5cae617c5dd72c46b1fd97f2548c08fdd305cb7b30d992"
+    },
+    {
+      "path": "assets/icons/map/cyclone.svg",
+      "size": 670,
+      "sha256": "f8c3b230cad42dfb26889889ddade6005b0ee3330cd56a643ece4559be84553e"
+    },
+    {
+      "path": "assets/icons/map/deployed_code.svg",
+      "size": 395,
+      "sha256": "66e8b330ee102b6860f6de043e7a79ab278e3ac610cd99f5ea59633d526ac3c7"
+    },
+    {
+      "path": "assets/icons/map/fmd_bad.svg",
+      "size": 450,
+      "sha256": "646bb3b7fc4c659708f16ab31df5b378de08d6d26a6e4efbd3efaf4952acb329"
+    },
+    {
+      "path": "assets/icons/map/format_align_justify.svg",
+      "size": 218,
+      "sha256": "42951d06f9394a89f322e074dc44ad2f6f549991fbcaedc8d1be54beac7faed9"
+    },
+    {
+      "path": "assets/icons/map/login.svg",
+      "size": 259,
+      "sha256": "e402155f7e7f692b49929748ab7a7fbc8e14a94ff5133d14367820140388c114"
+    },
+    {
+      "path": "assets/icons/map/logout.svg",
+      "size": 258,
+      "sha256": "6d43fb408a015dc2879dfc0e30e55e83e7a686011e482fccde5d5f754be861aa"
+    },
+    {
+      "path": "assets/icons/map/manifest.json",
+      "size": 5167,
+      "sha256": "34f92e04e0e44ea31b4d28777c20adf6cc8c8b7b646b42c8c363b183bc1e974b"
+    },
+    {
+      "path": "assets/icons/map/not_listed_location.svg",
+      "size": 654,
+      "sha256": "e2e1b59e094e4e0ba7e23937c34cf904e7b4354245e4062c4f22ffdcee459384"
+    },
+    {
+      "path": "assets/icons/map/poker_chip.svg",
+      "size": 935,
+      "sha256": "0d17225a379062a5c911206875830e9bc40b28558050d2a3c6250ad0785eb22e"
+    },
+    {
+      "path": "assets/icons/map/privacy_tip.svg",
+      "size": 396,
+      "sha256": "07010f8f94b350d35694a1c835c261223ad84e74ab6e5c74852c4874ae8d7c21"
+    },
+    {
+      "path": "assets/icons/map/settings_suggest.svg",
+      "size": 1093,
+      "sha256": "f3a5e7a9b7d0557657233fd76b5162e3327a4f752d7a8357cb365a008a6020e1"
+    },
+    {
+      "path": "assets/icons/map/shield_with_heart.svg",
+      "size": 431,
+      "sha256": "8afeba875d832ab4465af3deb089314023ee2f7488e4f8b91391cbb6d1b1081a"
+    },
+    {
+      "path": "assets/icons/map/swords.svg",
+      "size": 577,
+      "sha256": "e4ed16090eaf812f5258ca0d0aec1ea0a9f02d4d89b5a08923c250d6b2644011"
+    },
+    {
+      "path": "assets/icons/map/verified_user.svg",
+      "size": 322,
+      "sha256": "abd70cab16bbd9d08b455421d32d7fbb6aa5b24c87403ce0dd333109db313752"
+    },
+    {
+      "path": "bootstrap.loading.cjs",
+      "size": 2544,
+      "sha256": "6712d6485239ffd7bf2e58d5c0c1f9063c7a5f87972799d4143307dadcc6ab5f"
+    },
+    {
+      "path": "build_asset_variants.py",
+      "size": 2912,
+      "sha256": "c4c3f18171cd90ff136b1912eb781790b8c12f010a855eb08a2541e5ff07a2dd"
+    },
+    {
+      "path": "build_fonts.py",
+      "size": 6011,
+      "sha256": "ac9eee831eb51e3191eafae656d27931f4d39dd271e5c5c69faec7b70ae926d2"
+    },
+    {
+      "path": "build_map_icons.py",
+      "size": 1456,
+      "sha256": "32b98cf44672da169ce615f9f7612cac90361576fcb65dd434154f312ffa2c8c"
+    },
+    {
+      "path": "build_release.py",
+      "size": 15758,
+      "sha256": "17a5ae05435a5026c868211eacecfe6364207e6b5149de078f7389b28576dc88"
+    },
+    {
+      "path": "display-config.js",
+      "size": 3351,
+      "sha256": "0d370130ca12ca64ea58719f217ce2a77cb97fd8392fc6ce390c31165fbdfe0c"
+    },
+    {
+      "path": "inject_mobile.py",
+      "size": 21188,
+      "sha256": "3e88e72b250ae392a8d6cfbd0316ca10689ffa470a90578b721c15927686fcd6"
+    },
+    {
+      "path": "lunar/ASSETS.md",
+      "size": 32325,
+      "sha256": "f8ebead68a07a428a3623de1cc132255e8a63bef0da15dcebd2b281336f90b45"
+    },
+    {
+      "path": "lunar/FONTS.md",
+      "size": 7764,
+      "sha256": "1a1c8ec2f66369d51b37d4ff6707c16c0dd7c16859ddc6d0424f69d0959e67e4"
+    },
+    {
+      "path": "lunar/LOGGER.md",
+      "size": 14330,
+      "sha256": "1792050e31c6e665154270e34aa6f0275652eec06110844e9a912f7c1ed9a6e9"
+    },
+    {
+      "path": "lunar/LOGGER_USAGE.md",
+      "size": 19535,
+      "sha256": "af5040eea694126d70d9287f5a2a94ef1395099f5219e4bc5215d2db618c7d6e"
+    },
+    {
+      "path": "lunar/README.md",
+      "size": 51726,
+      "sha256": "a1cffc3119e7854ea575508c966c8664a2a8a213d0f230f454fc5036cd61b26d"
+    },
+    {
+      "path": "lunar/lunar.adapter.actions.cjs",
+      "size": 834,
+      "sha256": "0085bf8510e71f197269e6b95be0c768203c29ffecfe4a9f91e520efbe81e43f"
+    },
+    {
+      "path": "lunar/lunar.adapter.cards.cjs",
+      "size": 1095,
+      "sha256": "c2d14fa178c174dd229e6f4025dd5748220902f2581579856e1c3c830e2a017e"
+    },
+    {
+      "path": "lunar/lunar.adapter.chrome.cjs",
+      "size": 1883,
+      "sha256": "557fdbf020bb5de772e363b9035eb85ea9d2249c0847b578356d471f38af9536"
+    },
+    {
+      "path": "lunar/lunar.adapter.collected_data.cjs",
+      "size": 1088,
+      "sha256": "3a8a88088beec69ba66e794477d9f869d573413519c3aba918eeb550133a8e09"
+    },
+    {
+      "path": "lunar/lunar.adapter.combat.cjs",
+      "size": 2637,
+      "sha256": "c02fcca837a32647d2d71ee59a3097cf32fdb9521ff86ade5a5c89d9750377b3"
+    },
+    {
+      "path": "lunar/lunar.adapter.data.cjs",
+      "size": 1477,
+      "sha256": "876b6aabcc1cd5fc09cd2ea0442f7bedd00ca4fbca315f9c91d9fc99174b41cb"
+    },
+    {
+      "path": "lunar/lunar.adapter.game.cjs",
+      "size": 736,
+      "sha256": "6d3a7e72b335e3c90e3deaabfac3f6ea0178ee5d99d72f0d7acf7356ee6abe5d"
+    },
+    {
+      "path": "lunar/lunar.adapter.images.cjs",
+      "size": 6860,
+      "sha256": "0f6437b8af652768cadd8421a23eb6f8f65d6ae1ccc9a47bfc552d939a2b44aa"
+    },
+    {
+      "path": "lunar/lunar.adapter.lab_notice.cjs",
+      "size": 512,
+      "sha256": "3721d570cba40917a983999bee288bd2601fa69610a70187c48e095240c6ab09"
+    },
+    {
+      "path": "lunar/lunar.adapter.location.cjs",
+      "size": 575,
+      "sha256": "1f7c229e2935fabb24643fdd9dac3e2e7e97b815935928516e13e867e305e2ae"
+    },
+    {
+      "path": "lunar/lunar.adapter.map.cjs",
+      "size": 1357,
+      "sha256": "9cdf7d63d2b8e800b68acf802500e81016475387ccc73a52fbbb72c351c2420d"
+    },
+    {
+      "path": "lunar/lunar.adapter.menu.cjs",
+      "size": 533,
+      "sha256": "4871a5397ffbd8acbeae7eb82e3faa9f1b331546d354a6e7bd1a6031fd4a165d"
+    },
+    {
+      "path": "lunar/lunar.adapter.mods.cjs",
+      "size": 1207,
+      "sha256": "9314ca51b31232a9b111f525c0565fc55b4fa1fcc2383e907a22624872a29f5e"
+    },
+    {
+      "path": "lunar/lunar.adapter.run_report.cjs",
+      "size": 967,
+      "sha256": "04e04bb74e809a7fdceeaa89ad570a31c2e0f293a87ed81feb488a128c384c69"
+    },
+    {
+      "path": "lunar/lunar.adapter.saves.cjs",
+      "size": 1243,
+      "sha256": "1c184b2e9d217d39848938a2387c5ffd9adea20296ba10ed5d1ab2f762364a9b"
+    },
+    {
+      "path": "lunar/lunar.adapter.scan.cjs",
+      "size": 1780,
+      "sha256": "1393e9adf9c634144249e9b993a2b570e9511367f848981ee7967d6f6ba8f25b"
+    },
+    {
+      "path": "lunar/lunar.adapter.shop.cjs",
+      "size": 321,
+      "sha256": "ccbad31c827e3a169355293e730227555dc3d74d9bba281c6dfeb95774dde154"
+    },
+    {
+      "path": "lunar/lunar.adapter.story_actions.cjs",
+      "size": 2298,
+      "sha256": "12d3c87e86d5508973f255600c54eb8d198c737f76d5489d4155d1b916d6c4ae"
+    },
+    {
+      "path": "lunar/lunar.adapter.story_choices.cjs",
+      "size": 855,
+      "sha256": "39febecd6d41a85dd3497b1fab962b42755076680ed7b0ed6f8c5c1de8c966f0"
+    },
+    {
+      "path": "lunar/lunar.api.moonshine.cjs",
+      "size": 10215,
+      "sha256": "2735135d27c63ef1c9d5e96f1477da47843dcc05c06463a043d2be19dc62fc69"
+    },
+    {
+      "path": "lunar/lunar.assets.core.cjs",
+      "size": 14385,
+      "sha256": "07f9bc012fc409559a69a4ce9a97cb85d842f2b571bdb39d6c25bb453c4e1043"
+    },
+    {
+      "path": "lunar/lunar.assets.manifest.json",
+      "size": 1691,
+      "sha256": "737cc5a9ce5a70c027d5fb1f7a9165d4977a492fec0b1904cd4700925dc511a4"
+    },
+    {
+      "path": "lunar/lunar.assets.quality.cjs",
+      "size": 7207,
+      "sha256": "b0196028639b9c380b60d5d4bbe98a060f86a2957fa6757a6d8c7e7c0279b80a"
+    },
+    {
+      "path": "lunar/lunar.assets.variants.json",
+      "size": 199614,
+      "sha256": "95e10a4d6368911d9033cb13d72b445291cb2940b86c15d19e5abbdbe234a274"
+    },
+    {
+      "path": "lunar/lunar.bridge.actions.cjs",
+      "size": 21765,
+      "sha256": "60ed62a6d4a54be1c620133c87f6711f6a420c08477332e87212194d57925c99"
+    },
+    {
+      "path": "lunar/lunar.bridge.card_panel.cjs",
+      "size": 3452,
+      "sha256": "ef9751feb67f72b7e94090b349781eacd09690fd2418e9eca05a114b55a603db"
+    },
+    {
+      "path": "lunar/lunar.bridge.cards.cjs",
+      "size": 3137,
+      "sha256": "b86a3cc4dccfc97a7ec996b99048aad3b56e1030a84b3c2ee209dee4df85ddeb"
+    },
+    {
+      "path": "lunar/lunar.bridge.chrome.cjs",
+      "size": 6423,
+      "sha256": "415ad555121759990d50472099a013cf8766990e9b10bc6bf33f9c963a034021"
+    },
+    {
+      "path": "lunar/lunar.bridge.collected_data.cjs",
+      "size": 3573,
+      "sha256": "f27fe41beab692c1cb0c9518198730e263570185169e4d480e2464647373bd83"
+    },
+    {
+      "path": "lunar/lunar.bridge.combat.cjs",
+      "size": 8251,
+      "sha256": "110e125a4ed4b75418680047a0d19bbdd0b7e716ac06008eda212f9acd32c903"
+    },
+    {
+      "path": "lunar/lunar.bridge.compendium.cjs",
+      "size": 1193,
+      "sha256": "7fdceecee559374ac022b347f4176b1b3101cd403befb671cdbee971c461e37c"
+    },
+    {
+      "path": "lunar/lunar.bridge.effects.cjs",
+      "size": 1685,
+      "sha256": "decdc2059b30820a7d3f26832597ffb624314d4a3dda23e8e74bc48d5241ad5b"
+    },
+    {
+      "path": "lunar/lunar.bridge.game.cjs",
+      "size": 4457,
+      "sha256": "cc7d979c35ee68f0cc22984376f6e6e8d1595d00bf638cc48be77f0dc402d50d"
+    },
+    {
+      "path": "lunar/lunar.bridge.interfaces.cjs",
+      "size": 1368,
+      "sha256": "ab2986b4d012035cd83bae6a4138f19feaff497c70e4cdf97e8c57f7d73478d1"
+    },
+    {
+      "path": "lunar/lunar.bridge.lab_notice.cjs",
+      "size": 3579,
+      "sha256": "c43f9608fb4506569112800d61ef050d002eb81c411406c312bb3f9d4db3dc58"
+    },
+    {
+      "path": "lunar/lunar.bridge.location.cjs",
+      "size": 3217,
+      "sha256": "e90d17208b75bb56027503b9c438000e907883bd92ceafaa636799a6bed5dea0"
+    },
+    {
+      "path": "lunar/lunar.bridge.main_menu.cjs",
+      "size": 1084,
+      "sha256": "285abd14d00bc2d39ecdbfe25e82c5256b8d6ba127b5e62bf504a51595f1d925"
+    },
+    {
+      "path": "lunar/lunar.bridge.map.cjs",
+      "size": 6827,
+      "sha256": "0cf6553293df6237228e3cd4205bf88fd4f3480be9abf3d279d8fa8e9d13d2eb"
+    },
+    {
+      "path": "lunar/lunar.bridge.mods.cjs",
+      "size": 2825,
+      "sha256": "bc8458715cde0596437f8dc75dbea6f9616b4a566ce5ce239f289f6c9c1b0ec5"
+    },
+    {
+      "path": "lunar/lunar.bridge.native.cjs",
+      "size": 14947,
+      "sha256": "46bf3ac2ad088054af497427f968b7c8f4f540df33f6ac835675f1a6481ee222"
+    },
+    {
+      "path": "lunar/lunar.bridge.pause.cjs",
+      "size": 11843,
+      "sha256": "8d3bda41d4beedcfa770c202f09c77c74d7b1e1df4edc95791425a9488d6828c"
+    },
+    {
+      "path": "lunar/lunar.bridge.port.cjs",
+      "size": 8360,
+      "sha256": "b2e8b3e8d6b26ab953000552dde197d67263c98ab5a7d99d1710ce36595dfe49"
+    },
+    {
+      "path": "lunar/lunar.bridge.resources.cjs",
+      "size": 12968,
+      "sha256": "40e82cf413bc831102a1122718b7471b4117457ec95b06147c46941afbd95d8f"
+    },
+    {
+      "path": "lunar/lunar.bridge.run_report.cjs",
+      "size": 4905,
+      "sha256": "acbddd5055b499b1c215f81d96fa2f81c94ca22f99cd316795a29cbb36758b66"
+    },
+    {
+      "path": "lunar/lunar.bridge.saves.cjs",
+      "size": 2641,
+      "sha256": "9ebc4ab11171eb962ee1fe7e3fd9e866f68d7ac96c7677e3ec454b57cde7a88d"
+    },
+    {
+      "path": "lunar/lunar.bridge.scan.cjs",
+      "size": 8035,
+      "sha256": "0b1ff65f859d8e1a7ec5e03cbb9b54fea6dce4dd27cea52e8adc90904d6b92b1"
+    },
+    {
+      "path": "lunar/lunar.bridge.shop.cjs",
+      "size": 2112,
+      "sha256": "b6f51bc78b841637c986be7584a6706a76e7e6669a9ab969c41fd7382e8b2208"
+    },
+    {
+      "path": "lunar/lunar.bridge.story.cjs",
+      "size": 7605,
+      "sha256": "1a80b769efae6cbcdf3836a22b1c4eac04936c3b528e2c7d3bd70655ab0b3089"
+    },
+    {
+      "path": "lunar/lunar.bridge.story_choices.cjs",
+      "size": 4783,
+      "sha256": "a63c761ba78e15bc6de3baca83bc62cdc6e5a6dd3512ad89da87a0c3ed9b6718"
+    },
+    {
+      "path": "lunar/lunar.bridge.updates.cjs",
+      "size": 7331,
+      "sha256": "2ddc48296898985a3ba235ec0a01a0ae88bca07ab30d7ca0d6be27ee6fdc5086"
+    },
+    {
+      "path": "lunar/lunar.buffer.actions.cjs",
+      "size": 541,
+      "sha256": "6fd567f8eaf589800cd83f9bc39361b7dc51c86ba4fe5dba43e791102ce3fc19"
+    },
+    {
+      "path": "lunar/lunar.buffer.exchange.cjs",
+      "size": 288,
+      "sha256": "65f80422ee3a8a12fa7be132c9740d9ac510e48563d8bb65cc8af37abd527f70"
+    },
+    {
+      "path": "lunar/lunar.buffer.game.cjs",
+      "size": 235,
+      "sha256": "cb1e9487864a98e313681db5678b5530006041872bbc6cfb12a2b0659a92af48"
+    },
+    {
+      "path": "lunar/lunar.buffer.shop.cjs",
+      "size": 287,
+      "sha256": "261732260a9ca067316b18991715aac3222a733906b881ce0dab8828a61e96c7"
+    },
+    {
+      "path": "lunar/lunar.buffer.store.cjs",
+      "size": 1049,
+      "sha256": "95f8a246aee657b5ede2debf51708bdabbc513fd3ba2a1ce2ec5036544337604"
+    },
+    {
+      "path": "lunar/lunar.buffer.story.cjs",
+      "size": 910,
+      "sha256": "13847709c104a8f81686fd70df6a3b31d9bd544e69b22d6e1a07ccbce57cfdc0"
+    },
+    {
+      "path": "lunar/lunar.fonts.core.cjs",
+      "size": 5259,
+      "sha256": "f008d944dbcb78dd12dd2c42dff6381d25ed54fd85e4f21a5ed7395447100309"
+    },
+    {
+      "path": "lunar/lunar.fonts.manifest.json",
+      "size": 4314,
+      "sha256": "12d375cf2d33abb54d1d932e00c93386e2d4c30a9709e2e09484edb10406a6d2"
+    },
+    {
+      "path": "lunar/lunar.graphics_quality.toml",
+      "size": 356,
+      "sha256": "ed904757861935b12f6eda80afbd664cc0ba557016054717faf0cdab25161fe3"
+    },
+    {
+      "path": "lunar/lunar.logger.api.cjs",
+      "size": 4045,
+      "sha256": "75746bfc7dff97e410e356df03879418807c029fe66c0601adf2bdd00b2e5647"
+    },
+    {
+      "path": "lunar/lunar.logger.core.cjs",
+      "size": 9896,
+      "sha256": "93a404e79ec69bff5af0141fa98c936198159065a033f3cd773393e9e9c88fbc"
+    },
+    {
+      "path": "lunar/lunar.logger.quotes.toml",
+      "size": 555,
+      "sha256": "d09f09a44d933dd0b1d55f265705db5388d053424e7884bb193524af720a5210"
+    },
+    {
+      "path": "lunar/lunar.logger.storage.cjs",
+      "size": 2342,
+      "sha256": "be45e2e6a9c2ddf0e609d10e4fdf8489cac968ba192abcebf7c701d3570050c6"
+    },
+    {
+      "path": "lunar/lunar.manifest.toml",
+      "size": 287,
+      "sha256": "e3bd1b788e0e11e5b21064632b6b374bc93b9e22963782189ecaa7e15385177a"
+    },
+    {
+      "path": "lunar/lunar.recovery.core.cjs",
+      "size": 6924,
+      "sha256": "c822abae5082a5d7b2b96a1c516223aaa8a5ce84734e02652bc5877dc5ff912a"
+    },
+    {
+      "path": "lunar/lunar.transitions.core.cjs",
+      "size": 5037,
+      "sha256": "1f606ef42f93cb9ef1ed62f81964e0242a5e79b416447a3b89cfbe2b1258f7c5"
+    },
+    {
+      "path": "lunar/lunar.transitions.toml",
+      "size": 267,
+      "sha256": "209bb742e16f6133693d52db562cd4cbf502467c52e12b6450512c31a60e7b5d"
+    },
+    {
+      "path": "modules.json",
+      "size": 8347,
+      "sha256": "027320e43f99b4c0aee5e45d879b663700b683524575de0c7f28b7fd328ceb3c"
+    },
+    {
+      "path": "moonshine-components/CATALOG.md",
+      "size": 63836,
+      "sha256": "7146ce6bef3bd930ca2b39ed47d757a449e0a54f1c652cf1540b4b6f8736d6ca"
+    },
+    {
+      "path": "moonshine-components/LAYOUT_AUDIT.md",
+      "size": 11758,
+      "sha256": "d01dda342665f1f33417dfe31bba8e57e76e1eb1611a9a1757e794e3f4c86488"
+    },
+    {
+      "path": "moonshine/moonshine.animation.accordion.cjs",
+      "size": 4342,
+      "sha256": "a41a0b67640fadf079f2327dc92c75a7d8ea9b3018f385fbf6b8aa07a66891d5"
+    },
+    {
+      "path": "moonshine/moonshine.animation.card_hand.cjs",
+      "size": 4208,
+      "sha256": "912ff2c2d7262c2d0b9db37b046d60c0d99ccc087b19335db5faebfd954644e0"
+    },
+    {
+      "path": "moonshine/moonshine.animation.components.cjs",
+      "size": 2093,
+      "sha256": "bd8fe875b301d7108b1559e1543e288d459f88b132d78e9f52355a21f8c30191"
+    },
+    {
+      "path": "moonshine/moonshine.animation.effects.cjs",
+      "size": 3197,
+      "sha256": "eb1e345bed857262a15035d6c80c452b1e031d420e8847ac1dd9766f35dfbd21"
+    },
+    {
+      "path": "moonshine/moonshine.animation.prose.cjs",
+      "size": 2514,
+      "sha256": "e6510f23af2711db4d795423da0e01a612fc044e82a187ea7301179faae537b7"
+    },
+    {
+      "path": "moonshine/moonshine.component.actions.cjs",
+      "size": 10207,
+      "sha256": "11e08903b15f6c358545f3f2c0ad2071a8a1b4db7ef7315c39cf42ff54b73617"
+    },
+    {
+      "path": "moonshine/moonshine.component.card_panel.cjs",
+      "size": 1538,
+      "sha256": "571df0a9bb346d3515cce6ae7e7e19642fb0b79fe8a0d1f4d7a777acc44e5e5c"
+    },
+    {
+      "path": "moonshine/moonshine.component.card_panel.css",
+      "size": 1635,
+      "sha256": "4fd759357c98391184b12f4161393c0b4be1318e84ea36b850c83afbed8a208a"
+    },
+    {
+      "path": "moonshine/moonshine.component.card_thumbnail.cjs",
+      "size": 4074,
+      "sha256": "de556f6cbfe816357a364a6097e53ead891594900a06ebf80ab27e099d1c8c3a"
+    },
+    {
+      "path": "moonshine/moonshine.component.card_thumbnail.css",
+      "size": 3454,
+      "sha256": "4e82edc2fe9946a37d10f143c78ea50a75b09db2f98b9a16dbff1d9fd52fcb4b"
+    },
+    {
+      "path": "moonshine/moonshine.component.catalog.cjs",
+      "size": 13006,
+      "sha256": "3fba3ded96055d550d8549b0ac4c6c4f92ea2a336b63052eab20b7f00c26ed73"
+    },
+    {
+      "path": "moonshine/moonshine.component.catalog.css",
+      "size": 8711,
+      "sha256": "771d5363c37e8b70a07ea932737390413ba36ba982fd5b3d8588ccef3f60bb65"
+    },
+    {
+      "path": "moonshine/moonshine.component.chrome.cjs",
+      "size": 3610,
+      "sha256": "f54e8462a8d04018b4ad2fc8be463f85b7365900058265d1977e141cc37000d3"
+    },
+    {
+      "path": "moonshine/moonshine.component.collected_data.cjs",
+      "size": 2971,
+      "sha256": "eb55d64f8ed2410845d683780acc3c26bb2c89acc8413a45dcc45d3395d70907"
+    },
+    {
+      "path": "moonshine/moonshine.component.combat.cjs",
+      "size": 7609,
+      "sha256": "9281da7b0bd1e00f43aa62c4b94a6846e91d3681c1419c090c30bfd6fc6c1d88"
+    },
+    {
+      "path": "moonshine/moonshine.component.combat.css",
+      "size": 14894,
+      "sha256": "1c09744cd4bd44df9ec3fb36d9af045d40d579a9671586360531ea0ae1a4cabf"
+    },
+    {
+      "path": "moonshine/moonshine.component.combat_symbols.cjs",
+      "size": 479,
+      "sha256": "0bcc0744f1c195464bec7921cd43f969c41e49a3fea019a8dff947cf1dd992ed"
+    },
+    {
+      "path": "moonshine/moonshine.component.fonts.cjs",
+      "size": 613,
+      "sha256": "c0b734094356e478e88c90d330a230edaa05de0374a32e9829140d0ccb6fb53f"
+    },
+    {
+      "path": "moonshine/moonshine.component.graphics_quality.cjs",
+      "size": 1638,
+      "sha256": "f0f0c6f0e6c17bedaa43ecb22c31c860632d38b4e7215c8d88a1c2d29fc6586b"
+    },
+    {
+      "path": "moonshine/moonshine.component.graphics_quality.css",
+      "size": 1720,
+      "sha256": "4ace823d46a52dc55f1dfcf754bb0261983d33817f0c9944a5c80cd194b700f9"
+    },
+    {
+      "path": "moonshine/moonshine.component.inspection.cjs",
+      "size": 4259,
+      "sha256": "dafd095517156aa58b2e93503b29cbe130830e9a2712d3afa5831e53d034b8a4"
+    },
+    {
+      "path": "moonshine/moonshine.component.inspection.css",
+      "size": 1855,
+      "sha256": "e34e122f50a48e13e3f3a9141b196f5b5e2b8758f35f7dd150f7427380af515c"
+    },
+    {
+      "path": "moonshine/moonshine.component.location.cjs",
+      "size": 5769,
+      "sha256": "6e212daef4b78e2d7ccb3758b0a7657f8a3f481e1f297e625975cabfd66fcd4c"
+    },
+    {
+      "path": "moonshine/moonshine.component.map.cjs",
+      "size": 5686,
+      "sha256": "e2f6a6c7eb0d1360568168052495daf79d41165853e3d4cdb11b171df4781f25"
+    },
+    {
+      "path": "moonshine/moonshine.component.map.css",
+      "size": 3626,
+      "sha256": "c3cb7424dd2a19a1637fcb5e1618b96a0df4ebb0b373d9c1ab97e4d4b125e7bb"
+    },
+    {
+      "path": "moonshine/moonshine.component.map_visuals.cjs",
+      "size": 9434,
+      "sha256": "daf4d45e22bded925d6b8de90ee55ec8e86b6304e17fcc1175d273d0d595a798"
+    },
+    {
+      "path": "moonshine/moonshine.component.mods.cjs",
+      "size": 2982,
+      "sha256": "b6a00e4544e6efa4be8989f610f94b0e10b62b7d5ebca06c248caa5c3fc732f8"
+    },
+    {
+      "path": "moonshine/moonshine.component.prose.cjs",
+      "size": 1748,
+      "sha256": "60a183539c562e39aed91425164634ba56cd5b0f0e63e1a485de569bd94fdf3d"
+    },
+    {
+      "path": "moonshine/moonshine.component.result.cjs",
+      "size": 2216,
+      "sha256": "1b05335761f9b43630377b1f40e0cc33b7d0fc1772ec291daef219857230a567"
+    },
+    {
+      "path": "moonshine/moonshine.component.result.css",
+      "size": 2569,
+      "sha256": "cb72775474e536363915b984e8ccf2a5e6ce23991210911137bddaa71c33a33c"
+    },
+    {
+      "path": "moonshine/moonshine.component.run_report.cjs",
+      "size": 4370,
+      "sha256": "77ec82dff621547908171ab28ccfd23e1242d630d10e87420b90c3d66fdf5470"
+    },
+    {
+      "path": "moonshine/moonshine.component.run_report.css",
+      "size": 8727,
+      "sha256": "8962c90d13004b32d53b61b5d397752704f154825efbc8d6841431e67ca3d21f"
+    },
+    {
+      "path": "moonshine/moonshine.component.scan.cjs",
+      "size": 3723,
+      "sha256": "81388c26ae1567c3b9ba4b9be5f2fbc0bc71b4fdc8f37c31b7c2a1cad24e6ce3"
+    },
+    {
+      "path": "moonshine/moonshine.component.symbols.cjs",
+      "size": 2183,
+      "sha256": "9bcccadc10ff58529becfc3da9baf662f7a7f900ada4ebcc0f53001fb7c36618"
+    },
+    {
+      "path": "moonshine/moonshine.component.text_prompt.cjs",
+      "size": 4674,
+      "sha256": "4f3e8e3716f641cbd64fba745569ea7f0d1b138909437f36ad7dc869d5177ca7"
+    },
+    {
+      "path": "moonshine/moonshine.component.theme.cjs",
+      "size": 2573,
+      "sha256": "fecb77602c22b131754cd4391810839cdf7cb8d9c4a33784f0581899a8e5f296"
+    },
+    {
+      "path": "moonshine/moonshine.component.upgrades.cjs",
+      "size": 7246,
+      "sha256": "8ae097a5b187ccb34fc1bee82eb51c06771883ec397d798199ad1e64d7c274c4"
+    },
+    {
+      "path": "moonshine/moonshine.input.actions.cjs",
+      "size": 5256,
+      "sha256": "4a3ae47ae67521adefd4ac13690cf0790dc993013be43492882895a7c7453d72"
+    },
+    {
+      "path": "moonshine/moonshine.input.card_panel.cjs",
+      "size": 1563,
+      "sha256": "75a311c5ecde05919ee26f3b0dbef38151a4c7bcc90ff1f4db68dd40acbb4ef3"
+    },
+    {
+      "path": "moonshine/moonshine.input.combat.cjs",
+      "size": 2961,
+      "sha256": "f36c28b3d46948580f1219a444518d79fabf9bd5243acdc61ee423115295be7b"
+    },
+    {
+      "path": "moonshine/moonshine.input.map.cjs",
+      "size": 729,
+      "sha256": "66261558360a25ff33fcacbcad7d7f595ed4d23ca00d63bea76a2880316492de"
+    },
+    {
+      "path": "moonshine/moonshine.input.mods.cjs",
+      "size": 1728,
+      "sha256": "be1557b937cb055e3842fa7b6781b2ea9f8bf0298966542e63b19c8b2ccbe8c5"
+    },
+    {
+      "path": "moonshine/moonshine.input.result.cjs",
+      "size": 1117,
+      "sha256": "2e7f4b5a81d69a15210a4c849e15ad9c6c568048d33176c5351676c5331e43b2"
+    },
+    {
+      "path": "moonshine/moonshine.input.scan.cjs",
+      "size": 599,
+      "sha256": "33590d2464cf21faba8b5b9ac487a8f34944e18c93362b28727f9d69f733403c"
+    },
+    {
+      "path": "moonshine/moonshine.input.story_actions.cjs",
+      "size": 1527,
+      "sha256": "a7a99b2437c9a0e94b948fd896440a7db59c2100ce4f57e87a1e0055e832d7dc"
+    },
+    {
+      "path": "moonshine/moonshine.main_menu_watermark.toml",
+      "size": 294,
+      "sha256": "8ca406084bd9b2b762abfaeaaea5976467f36612e95ddacdcaad5d2186d5d50c"
+    },
+    {
+      "path": "moonshine/moonshine.manifest.toml",
+      "size": 330,
+      "sha256": "fdbc38407defac99a35908bb03bc29d78689d943559a92283f0170b5b0aa54bd"
+    },
+    {
+      "path": "moonshine/moonshine.view.actions.cjs",
+      "size": 15856,
+      "sha256": "b536eacf8c7bced4ffad580355aad1e64f2fa83f379c22c8f088963d4585b67c"
+    },
+    {
+      "path": "moonshine/moonshine.view.actions.css",
+      "size": 12589,
+      "sha256": "66d2fdd1a388262304c3013a9c099c682830e060b7734c9cc36a3676992fc858"
+    },
+    {
+      "path": "moonshine/moonshine.view.background.cjs",
+      "size": 11504,
+      "sha256": "68e909ab38558c4c09d465dcb675f799fb4cd0a00a80344fb100716c23fa888d"
+    },
+    {
+      "path": "moonshine/moonshine.view.card_detail.cjs",
+      "size": 13186,
+      "sha256": "f50e95cdf81445276831ccab01b6e53ccf66a72ff00c1e3a9c1acbbea231c736"
+    },
+    {
+      "path": "moonshine/moonshine.view.card_panel.cjs",
+      "size": 3065,
+      "sha256": "3c051bffc1b1aa03dfb789919dcd522b3548f1708d9ebc733030f6e9bd60c775"
+    },
+    {
+      "path": "moonshine/moonshine.view.collected_data.cjs",
+      "size": 5155,
+      "sha256": "ff1ab971c86cef3de1bff0d8c563a980b459a808a219fa6811d728162e177e37"
+    },
+    {
+      "path": "moonshine/moonshine.view.collected_data.css",
+      "size": 4075,
+      "sha256": "bea899bc35c8a687f08b9ad711078e3fdab4af7304ff7ea3cdc0e3e75954f6bd"
+    },
+    {
+      "path": "moonshine/moonshine.view.combat.cjs",
+      "size": 5458,
+      "sha256": "4cf75131ad8fdf2d47b4092c0410a6af1b8087880fa373e05523a4fdb8fc9ba2"
+    },
+    {
+      "path": "moonshine/moonshine.view.compendium.cjs",
+      "size": 15872,
+      "sha256": "ddbbcbcba2d498f46a2e8f51b6924775b7c205774bd0443c8a55d38f92627fc4"
+    },
+    {
+      "path": "moonshine/moonshine.view.deck.cjs",
+      "size": 11068,
+      "sha256": "6527c53923d212f6b0dd9fd847489ffcd97e32dcc2925f9b95d681c697d1b6dc"
+    },
+    {
+      "path": "moonshine/moonshine.view.dialogs.cjs",
+      "size": 13589,
+      "sha256": "6e1c9bc9956ce5449ca4b0a41e2f10db77dc7591ac963479c228f4707eac2fdb"
+    },
+    {
+      "path": "moonshine/moonshine.view.display.cjs",
+      "size": 2150,
+      "sha256": "a602d40cce8dad35cbeb4106461c3ca67d706993894ec54c798d9e8812cbca74"
+    },
+    {
+      "path": "moonshine/moonshine.view.encounter_assets.cjs",
+      "size": 601,
+      "sha256": "b23429f985d848f66dd096b9e2988c72f2c8fea2a3bdd2075f89518384ae8ab7"
+    },
+    {
+      "path": "moonshine/moonshine.view.game_chrome.cjs",
+      "size": 48674,
+      "sha256": "9c472c4e6d7e3c7a462350a995aa222d9f04f7a54d3e74397e2831efd4d9bbad"
+    },
+    {
+      "path": "moonshine/moonshine.view.geometry.cjs",
+      "size": 3046,
+      "sha256": "a28583e397c01b64664f017b2c88ce00490dbd3d243eb1397cf36d222ab3ef89"
+    },
+    {
+      "path": "moonshine/moonshine.view.graphics_quality.cjs",
+      "size": 4020,
+      "sha256": "fd0881c885847d4276ad5d38544a7e9f9c8a44a1f378e92c748f5ac936506667"
+    },
+    {
+      "path": "moonshine/moonshine.view.lab_notice.cjs",
+      "size": 3008,
+      "sha256": "f4efe43c952db1638858c0ce7438af4f6991b554e158b4d9238667f39db26e14"
+    },
+    {
+      "path": "moonshine/moonshine.view.lab_notice.css",
+      "size": 1555,
+      "sha256": "78eaba877f842f6adafc5a794f783f2e522722a490b671964309f0487d420698"
+    },
+    {
+      "path": "moonshine/moonshine.view.layout.cjs",
+      "size": 6579,
+      "sha256": "25f4cd99618578a80bcc4d19ad90f3941064c0f77a5ccab6eacd31688e0482a4"
+    },
+    {
+      "path": "moonshine/moonshine.view.loading.cjs",
+      "size": 5779,
+      "sha256": "58daf979813e918988a516050805f29a7ce6399179649cdf21865c48f88a3338"
+    },
+    {
+      "path": "moonshine/moonshine.view.loading.css",
+      "size": 5138,
+      "sha256": "fa9f8921b663e76f37abd4d2ad84c3b73df63a85f076bc0eec98197b517237d5"
+    },
+    {
+      "path": "moonshine/moonshine.view.location.cjs",
+      "size": 7561,
+      "sha256": "3e763599cd19e4e39a85af390b4b5f5a4dbd2c7ba7934aad365a940565742362"
+    },
+    {
+      "path": "moonshine/moonshine.view.main_menu.cjs",
+      "size": 3943,
+      "sha256": "5bc7ccde0224bb04eb359ac2cc98d8d17777156f0483281a712ed9306dc41601"
+    },
+    {
+      "path": "moonshine/moonshine.view.main_menu_watermark.cjs",
+      "size": 1351,
+      "sha256": "5260e5b5a13f0bf632fbfc510487814b7552d7e80c985af7b6e147830d266f38"
+    },
+    {
+      "path": "moonshine/moonshine.view.map.cjs",
+      "size": 2119,
+      "sha256": "5e746f7d25f7fae09d08cd70b5e9859608e422e57076860a34e82415ed60321f"
+    },
+    {
+      "path": "moonshine/moonshine.view.mods.cjs",
+      "size": 7238,
+      "sha256": "f5f57f68fb147a75735b819a6860dc919475b989879cc87392fd768456ac8487"
+    },
+    {
+      "path": "moonshine/moonshine.view.presentation.cjs",
+      "size": 3672,
+      "sha256": "45cd55f41dbbf82393281945cdb73d28e1c392ce1084ce00b14210d819cf6013"
+    },
+    {
+      "path": "moonshine/moonshine.view.recovery.cjs",
+      "size": 6396,
+      "sha256": "39a6dbd393ad2a39eb56c6958424941a487b666351133275d5a43058ec642039"
+    },
+    {
+      "path": "moonshine/moonshine.view.recovery.css",
+      "size": 2566,
+      "sha256": "9945ee9458bb0577f0a70a30bb9adf0a991feb0b478166936e9e49f528d45998"
+    },
+    {
+      "path": "moonshine/moonshine.view.report_export.cjs",
+      "size": 5891,
+      "sha256": "7bfa02e3ce5e203afcefdbce2402d78ac6d7095c5dd74ed6fdaf468b98d16768"
+    },
+    {
+      "path": "moonshine/moonshine.view.result.cjs",
+      "size": 1923,
+      "sha256": "f45cdc4777d195ddd10ba191fbb75a11f09f8497b33219871bbab522efc47eec"
+    },
+    {
+      "path": "moonshine/moonshine.view.root_guard.cjs",
+      "size": 6182,
+      "sha256": "d1faab46cac72d7876491ab793942062267bdae68559383d71a170774c0404d8"
+    },
+    {
+      "path": "moonshine/moonshine.view.run_report.cjs",
+      "size": 5813,
+      "sha256": "a05f64e5c62a378eefcf42888ff3e7690c7a0096a7087f1977a3c03272838250"
+    },
+    {
+      "path": "moonshine/moonshine.view.runtime.cjs",
+      "size": 11978,
+      "sha256": "be8259f8b4708e59afcffca6acfbc989892379e3c32eb097e01757d9149e2c26"
+    },
+    {
+      "path": "moonshine/moonshine.view.runtime.css",
+      "size": 18320,
+      "sha256": "c44b4a44396ba1ab6561bb1b0b812a643506f619204dff8e9977742e1dc1d47f"
+    },
+    {
+      "path": "moonshine/moonshine.view.saves.cjs",
+      "size": 17676,
+      "sha256": "0ef65e89f930a0fabe6952a9e0f44398ef768cf508c0cbd6fc06aaae867cc030"
+    },
+    {
+      "path": "moonshine/moonshine.view.scan.cjs",
+      "size": 8984,
+      "sha256": "7999d00786a22689fa7f746ab4a08fafedf14a2536348f6f6b7251ca8f25ad92"
+    },
+    {
+      "path": "moonshine/moonshine.view.scan.css",
+      "size": 4771,
+      "sha256": "72d0f0f458b44accb72833b34c04061b30745db44f86ea244b2a76e7ac18aac1"
+    },
+    {
+      "path": "moonshine/moonshine.view.scene_transition.cjs",
+      "size": 5344,
+      "sha256": "db4edf4e268795d2d3345549105c5a2424d6c22803e38c8a070f0ebf35abdad3"
+    },
+    {
+      "path": "moonshine/moonshine.view.settings.cjs",
+      "size": 21524,
+      "sha256": "3dec955bff20e2c6d05591610f3e446e29b0a8d2fa69edd1bd5f8529f5a69bd2"
+    },
+    {
+      "path": "moonshine/moonshine.view.source_styles.css",
+      "size": 187144,
+      "sha256": "495960933c199645e781dda37ec30f9e47a259a7ac5f414d73a8a74599f5f01c"
+    },
+    {
+      "path": "moonshine/moonshine.view.story.cjs",
+      "size": 9208,
+      "sha256": "e9de666f453fb13749b55bc5d3a961aaecddce81e97effb8775a68c80ead8c32"
+    },
+    {
+      "path": "moonshine/moonshine.view.story_phase.cjs",
+      "size": 181,
+      "sha256": "a97e56ce3e151ac2c17658dfd152e042bc9dc3624e53184fa0ffd831c0f06fe0"
+    },
+    {
+      "path": "moonshine/moonshine.view.style_adapter.cjs",
+      "size": 2207,
+      "sha256": "abad07e316b1bfeaa1340926070c5a356c976b9f444f079061c4893086f1770c"
+    },
+    {
+      "path": "moonshine/moonshine.view.updates.cjs",
+      "size": 6493,
+      "sha256": "b517b422bd362d01cb534002a783f0ca8ca9a85619adba3e0cddd1c02c99ce70"
+    },
+    {
+      "path": "moonshine/moonshine.view.workspace.cjs",
+      "size": 19231,
+      "sha256": "713567d1a7a458fee6eba0d9bde9a1ed8dafeef2b3b4c38f21e901134eef2820"
+    },
+    {
+      "path": "prepare_release_catalog.py",
+      "size": 2830,
+      "sha256": "cf9e234ef686b1053ec78291fa4006b58a110a6d5aa4346eac97c24b55889727"
+    },
+    {
+      "path": "release.toml",
+      "size": 363,
+      "sha256": "7e7ca6ec138e5bf559228a144feb48bcfe16220ccba1950bdc83959988b04ac7"
+    },
+    {
+      "path": "story_text_tool.py",
+      "size": 13449,
+      "sha256": "a36221b4983641174a429e4b4f49c61378bf4e1d4b9cc2c356934f418670fef8"
+    },
+    {
+      "path": "synodic.build.toml",
+      "size": 221,
+      "sha256": "e7599653e5391ecc64bd055d4aa62b0d622b79e6ffccdd6e7fbf7cab7a853acb"
+    },
+    {
+      "path": "tests/README.md",
+      "size": 70582,
+      "sha256": "0d16c96c35676973a412071375df363d1eb4d44c9f15406023cb2e9e1f4d6cbe"
+    },
+    {
+      "path": "tests/benchmark_b66_assets.cjs",
+      "size": 892,
+      "sha256": "6bb8ec30797fc163fc1190872c55ed489cc6938aac095b8b2ede52d59bfa7784"
+    },
+    {
+      "path": "tests/benchmark_b66_fonts_startup.cjs",
+      "size": 903,
+      "sha256": "6374305f189e89cc9e2f1c36cc45fc482ab65eb9f16e68b18d6d393154c23d78"
+    },
+    {
+      "path": "tests/fixtures/legacy/README.md",
+      "size": 281,
+      "sha256": "750f859198714d6a59b7b1f56b301b833b6d2aec9ff9399654c02a2837cb5f7b"
+    },
+    {
+      "path": "tests/helpers/capsule-paint.cjs",
+      "size": 2937,
+      "sha256": "59801269a053c89c3d1cb7d40623cfb4af4411f262964ab66bdee1e399203a9e"
+    },
+    {
+      "path": "tests/helpers/card-detail-stack.cjs",
+      "size": 3704,
+      "sha256": "3c7b8ca005b91ffcce4b799266bda7e6e026d642d82e8fb9dbbead6b44652cf0"
+    },
+    {
+      "path": "tests/helpers/card-glow.cjs",
+      "size": 694,
+      "sha256": "da579936efd867347329a76b1201662c387bcec3b2ac405a63669386246d1af1"
+    },
+    {
+      "path": "tests/helpers/inspect_chrome_minidump.py",
+      "size": 5188,
+      "sha256": "22c087bffec02fd4cce1ecfc0ff2e8f9eb78245fbbf0b56274afb79418d9d913"
+    },
+    {
+      "path": "tests/helpers/install_moonshine_fixture.cjs",
+      "size": 1506,
+      "sha256": "54beda735b74ed794c15992cb779268d46b43cd94a1ebed1e72141151afc9a80"
+    },
+    {
+      "path": "tests/helpers/logger-stub.cjs",
+      "size": 167,
+      "sha256": "b16f515e4308c6ab74aeadb16068f120a1ca4e89cb28c920483250405d084dc4"
+    },
+    {
+      "path": "tests/helpers/map-background.cjs",
+      "size": 1461,
+      "sha256": "45f7f1b9751782681a97fe19e934041fa09f96bff4a77e07d3f8497fda2d3ada"
+    },
+    {
+      "path": "tests/helpers/map-node-paint.cjs",
+      "size": 3868,
+      "sha256": "0d2d17b1813d95e23c701c182d8901ff1ecdbf1d849edb30c110347924a88f76"
+    },
+    {
+      "path": "tests/helpers/moonshine-test-ui.cjs",
+      "size": 2262,
+      "sha256": "57ecab1e6fbd8532919a6e7f22bcd1263fd17c835043d887a30b389e56ea4df9"
+    },
+    {
+      "path": "tests/helpers/performance-probe.cjs",
+      "size": 14965,
+      "sha256": "b6868158344f14e7019521148bb969d0b85ec3aeb3f025408f379db220c2d1cc"
+    },
+    {
+      "path": "tests/helpers/release-audit-probe.cjs",
+      "size": 3820,
+      "sha256": "8d02686af6e7bb20cc18d447b238744418f8bed118cc2b271d69cb16aa326f24"
+    },
+    {
+      "path": "tests/helpers/synodic-test-paths.cjs",
+      "size": 911,
+      "sha256": "34f7a859ef3a743bc80a2765178f0862b63b2ba14f5a541205f64d3abe5da365"
+    },
+    {
+      "path": "tests/helpers/visual-readiness.cjs",
+      "size": 6160,
+      "sha256": "14508fa88a5a7ee98733cf0b855b367fc7d1268fa41b441219e62d9b6c92010d"
+    },
+    {
+      "path": "tests/summarize_b65_performance.cjs",
+      "size": 3181,
+      "sha256": "d1f3c75f43069f9508ac8d66b5c638644919a096f0d2bf33de6adb0c0c866367"
+    },
+    {
+      "path": "tests/summarize_b66_assets.cjs",
+      "size": 6122,
+      "sha256": "d1572849c4a27f651138af0b116083db1ed3233cc00ed020b4cd1d58db1ddea0"
+    },
+    {
+      "path": "tests/summarize_b66_collected_data.cjs",
+      "size": 3598,
+      "sha256": "a8443ca75ca3b42bed362a4a307f6b5c50c543eaada1fa5c75912f0d72094a79"
+    },
+    {
+      "path": "tests/summarize_b66_fonts.cjs",
+      "size": 6457,
+      "sha256": "b635c3f10a8f62fc67756b25cc6e3b5cb3e5387f71a4ef06eb0d58ba4e78358a"
+    },
+    {
+      "path": "tests/summarize_b66_logger.cjs",
+      "size": 5258,
+      "sha256": "5e8ae87fba16bbca94fe2551c58739ef73a908b692c6b6130630073f48027829"
+    },
+    {
+      "path": "tests/summarize_b66_performance.cjs",
+      "size": 5522,
+      "sha256": "c64716918b70db6c2142b8ddd4eabe6a973e24d257b58fce0d41dd629b779e01"
+    },
+    {
+      "path": "tests/summarize_b66_persistent_chrome.cjs",
+      "size": 3619,
+      "sha256": "c2a8c34f451895f377f506e4b5154869f180924db330158c0dd571df820a0b23"
+    },
+    {
+      "path": "tests/summarize_b66_scan.cjs",
+      "size": 4110,
+      "sha256": "6796bf11edee16bccc34fc0572c5ffd8fa219b17c37953b8df802c83cefe9b3b"
+    },
+    {
+      "path": "tests/summarize_b66_scan_inspection.cjs",
+      "size": 3599,
+      "sha256": "c8db1ae9d6fa0bada2e547755f34cb2a08f5ad43087177846cdd1ec7c94ec701"
+    },
+    {
+      "path": "tests/test_architecture.cjs",
+      "size": 4192,
+      "sha256": "0b3491d747d9c15ed75df9feaedae62bdc546db629bc4848b30f401d971fd2b9"
+    },
+    {
+      "path": "tests/test_assets.cjs",
+      "size": 7625,
+      "sha256": "d0a4ab6f59b774612da3c752c7d86aa1bdce32d34a42b52d36d95759d3729892"
+    },
+    {
+      "path": "tests/test_b5_dialogs.cjs",
+      "size": 7605,
+      "sha256": "9b18828a65ef7d77b8031afd16dd317f7a7ad1f78d6f916b196d504ed1d52344"
+    },
+    {
+      "path": "tests/test_b5_saves.cjs",
+      "size": 23483,
+      "sha256": "42c0509f648eacd70e3f69f06ddb1ce465688a55df6b01b5126d0f37bdeee9d9"
+    },
+    {
+      "path": "tests/test_b5_tall_panels.cjs",
+      "size": 7119,
+      "sha256": "b1df73b336e97dd9119c25325cda800baca365066dcd5fdbcdcd3b4811a63994"
+    },
+    {
+      "path": "tests/test_b5_upgrades.cjs",
+      "size": 9332,
+      "sha256": "899152e2bc474309369a2b39f24f5e7cde5b8c95a0108abc087537409e39b622"
+    },
+    {
+      "path": "tests/test_b65_stabilization_live.cjs",
+      "size": 6785,
+      "sha256": "f295dd241b0d506417cd671bf51a5aef79be38b1d493313211adcd0bdfc2c1c5"
+    },
+    {
+      "path": "tests/test_b66_action_labels_live.cjs",
+      "size": 8524,
+      "sha256": "055aed1d467fa11c392239ee21e86c11285113b4093d71d2bcaec44196a4431a"
+    },
+    {
+      "path": "tests/test_b66_adaptive_centering_live.cjs",
+      "size": 7622,
+      "sha256": "9085b2997fbdb16b53e60505b3843c215f365fa11ed83557205146b65233be6e"
+    },
+    {
+      "path": "tests/test_b66_assets_live.cjs",
+      "size": 6809,
+      "sha256": "c3de1bf57b7ca6238052835426cdfe08d19642a70df4d83c74c2b123a18ce9fe"
+    },
+    {
+      "path": "tests/test_b66_assets_startup_live.cjs",
+      "size": 3885,
+      "sha256": "0f7a5a8f2e33f615367fdfd80266d0f75a84c4ffb38993f518dd38dfb11563fe"
+    },
+    {
+      "path": "tests/test_b66_assets_style_attribution.cjs",
+      "size": 2366,
+      "sha256": "dcbe4c681faefdc25bb3e1685ca4b8d6435378be03d2c847003d0267a2cc1173"
+    },
+    {
+      "path": "tests/test_b66_assets_switch_live.cjs",
+      "size": 6665,
+      "sha256": "e3a43d939139d928e2cd3458c0e4180d950c236791f068e1601390cab658c8fc"
+    },
+    {
+      "path": "tests/test_b66_card_art_live.cjs",
+      "size": 2218,
+      "sha256": "bd1d328e61d78e19607597268067316edbed405f1373156996b9be1ecf724e87"
+    },
+    {
+      "path": "tests/test_b66_card_multiplier_live.cjs",
+      "size": 6711,
+      "sha256": "7acfb6c338bed064d1f484e88fce870b7b2fbba1c85ce031c37efbd4830deba8"
+    },
+    {
+      "path": "tests/test_b66_card_receipt_live.cjs",
+      "size": 13132,
+      "sha256": "93308540f5fad3bdef232be15706ca08df68ea62b3aa6b495ee966295538ec99"
+    },
+    {
+      "path": "tests/test_b66_card_thumbnails_live.cjs",
+      "size": 15741,
+      "sha256": "3a96d9f21a27787ce375e915ec62dc95730b541049b05d4508ac6102913fc8e0"
+    },
+    {
+      "path": "tests/test_b66_cg_recovery_live.cjs",
+      "size": 11203,
+      "sha256": "1f2a6398b5a246964ea886c8b81e096902d0b1851779cdcb9e21268e35079240"
+    },
+    {
+      "path": "tests/test_b66_chrome_extreme_live.cjs",
+      "size": 29099,
+      "sha256": "f986f5122f5107fc097570509f00d331c452796734f05c7c12cb1530dd2deb10"
+    },
+    {
+      "path": "tests/test_b66_collected_data_live.cjs",
+      "size": 17997,
+      "sha256": "c384bb5461a8ac6399ba8d3812f1b61f7e5e1a364b049d5fd46b48e86fd5f5b4"
+    },
+    {
+      "path": "tests/test_b66_collected_location_lifecycle_live.cjs",
+      "size": 6540,
+      "sha256": "9f92945d15c2deb468c32f6e70a9a2465fe763a5e5b425077e35c3ba3a99516e"
+    },
+    {
+      "path": "tests/test_b66_compendium_unlock_live.cjs",
+      "size": 10171,
+      "sha256": "88bbf773562facbbe5bd9fc72adb728c79f7ac9ec9c7f7c7ac6deb146459c6ac"
+    },
+    {
+      "path": "tests/test_b66_display_recovery_live.cjs",
+      "size": 6264,
+      "sha256": "007e8f1b66829ca22fb2019e2f69a56bf17f99d0ae7489a3be2e4c90b308bcf6"
+    },
+    {
+      "path": "tests/test_b66_domains_live.cjs",
+      "size": 10932,
+      "sha256": "9ee02d69852c70fd38ee4a893f5f8255f5f5fcc28acd1367104387321971463f"
+    },
+    {
+      "path": "tests/test_b66_effects_live.cjs",
+      "size": 5241,
+      "sha256": "917c4bc6f787357ef9b84428594be832dcfe0df5d361eaec04f047145f00bd1b"
+    },
+    {
+      "path": "tests/test_b66_fonts.cjs",
+      "size": 3125,
+      "sha256": "8e42246919d9a59c8eb85c7a99712546268f7de0288584524a47a2108ea94b4e"
+    },
+    {
+      "path": "tests/test_b66_fonts_live.cjs",
+      "size": 7805,
+      "sha256": "2cc7693fefe942f7ce2948e3aaac67e375c9ae350871fb3f3485a461520566da"
+    },
+    {
+      "path": "tests/test_b66_fonts_startup_live.cjs",
+      "size": 4283,
+      "sha256": "a2f096cc00f8894ea4e8ebab23d3ef72b9b758faced9efb972cf722ba73c7beb"
+    },
+    {
+      "path": "tests/test_b66_fullscreen_layout_live.cjs",
+      "size": 6254,
+      "sha256": "21d17e8b1814aec0bbd7f71f7ab2292ccadbc2757db860dba006257e57239911"
+    },
+    {
+      "path": "tests/test_b66_loading_policy_live.cjs",
+      "size": 13913,
+      "sha256": "b7cffe8ea6b7fb6e71dad8d8b318213ceffc55f23a4cf3632c857031f564e7fc"
+    },
+    {
+      "path": "tests/test_b66_loading_visual_live.cjs",
+      "size": 7221,
+      "sha256": "6154539e79e6e90df81a8c04612350d360cc9cf9a9d6d1fcbde32968d2725ef3"
+    },
+    {
+      "path": "tests/test_b66_location_lifecycle_live.cjs",
+      "size": 7497,
+      "sha256": "eca991d9decba999302ba5207c80eae16fb56a4cc7e64b8e92dbbca218f99047"
+    },
+    {
+      "path": "tests/test_b66_location_live.cjs",
+      "size": 14843,
+      "sha256": "853fa2a4d8b7fdd90e3688febd12cb81e0c8ddc54b8fbb2c56443325d9ada79e"
+    },
+    {
+      "path": "tests/test_b66_logger_attribution_live.cjs",
+      "size": 4188,
+      "sha256": "a8dfe3d7daa6dd7f6524ab3b0f536a91ee76843dd10f22a8e2d3cde904f49bcb"
+    },
+    {
+      "path": "tests/test_b66_logger_live.cjs",
+      "size": 11099,
+      "sha256": "2c6e26b9c89cb13986b543be3e4f3ef225b3bb90a935a2f49d212714f7c6853e"
+    },
+    {
+      "path": "tests/test_b66_main_menu_watermark_live.cjs",
+      "size": 7329,
+      "sha256": "a2b22e93622f0a21a7ff8e14b92f4bb744c3ec540d051fa8ed14e37f5186a732"
+    },
+    {
+      "path": "tests/test_b66_map_scroll_live.cjs",
+      "size": 7858,
+      "sha256": "476938c71fe7e4c46e02484a8519d34adf28794af4f5ce8998ceffa86d52cffd"
+    },
+    {
+      "path": "tests/test_b66_persistent_chrome_live.cjs",
+      "size": 14912,
+      "sha256": "4ac0f768e1d9164ebe7cd06ac6e239b948e28cc9229caea9d073b3594ad1ca2e"
+    },
+    {
+      "path": "tests/test_b66_save_confirm_live.cjs",
+      "size": 7845,
+      "sha256": "66d628b7309ed54eb54f612387deeca3eee5d2cc0d2aa4c32650e11434060ad5"
+    },
+    {
+      "path": "tests/test_b66_save_rename_live.cjs",
+      "size": 9176,
+      "sha256": "1c7e7667fbbc29e05e8100972fbcaf0abeaea7dc4c1a066f3b4f370f31b7a83f"
+    },
+    {
+      "path": "tests/test_b66_scan_flow_live.cjs",
+      "size": 17219,
+      "sha256": "037a1f552c395b73f783965d9615acee10324a0f370b8da9115a313b6467d7b9"
+    },
+    {
+      "path": "tests/test_b66_scan_inspection_live.cjs",
+      "size": 13802,
+      "sha256": "f982856e1726d2d44f8b2a5da23edcb4f8744ff00a6223d0949a68114e5acda1"
+    },
+    {
+      "path": "tests/test_b66_shop_cinematic_live.cjs",
+      "size": 13025,
+      "sha256": "ce7a611618e6b8494139f9981b3723ab3cb7a8b08bc6c81b06cb342c7287afbe"
+    },
+    {
+      "path": "tests/test_b66_story_gate_live.cjs",
+      "size": 9501,
+      "sha256": "4976f2a8b7b029e6c7bfefef37cad84386abc21e0e3101c8b9c90a0a39edc071"
+    },
+    {
+      "path": "tests/test_b66_symbols_delivery_live.cjs",
+      "size": 3517,
+      "sha256": "0e3bc7851576c928e33109a26c430bb4eab65ee1e77c92bf8390ab6fd432ab81"
+    },
+    {
+      "path": "tests/test_b67_combat_flow.cjs",
+      "size": 12755,
+      "sha256": "e81348fbc511a09ddaabd416bc6da5558ee8bb46f61dd50c8e175eef4a4e60d2"
+    },
+    {
+      "path": "tests/test_b67_combat_live.cjs",
+      "size": 11966,
+      "sha256": "21e6e9ec85e092542ee77d6eedfc4f2717290695a65191f136a1d36f638c8f7c"
+    },
+    {
+      "path": "tests/test_b67_map_chrome_live.cjs",
+      "size": 8845,
+      "sha256": "eece9bc53e8c403e8b40938065800fd6017447b35b6707d4a4ba0995e7a5efaf"
+    },
+    {
+      "path": "tests/test_b67_performance_pair.cjs",
+      "size": 3673,
+      "sha256": "abfb74224c2d3e39cf091e7b358aa980a5a6051b37c356104ecec6c9099d7ca9"
+    },
+    {
+      "path": "tests/test_b67_rest_cards_live.cjs",
+      "size": 18237,
+      "sha256": "777bd98fc9390c84217935470bd1128655c191a91731dafbb69c520b48a6b000"
+    },
+    {
+      "path": "tests/test_b67_rest_result_live.cjs",
+      "size": 12818,
+      "sha256": "9b52a6b8e951608281c2a3a4f9251ec757f9a5ddb6fbab54b1df1394a724c968"
+    },
+    {
+      "path": "tests/test_b68_asset_quality.cjs",
+      "size": 4763,
+      "sha256": "a23723159bf44ae70895f6111d70d10703f7bf335487905533e85be5db5cb9ef"
+    },
+    {
+      "path": "tests/test_b68_background_framing_live.cjs",
+      "size": 10837,
+      "sha256": "f4117dfd2d4aaaf3281c48b671ee8f038c2f55a3d867eacc9054e16cdf74d84f"
+    },
+    {
+      "path": "tests/test_b68_background_race_live.cjs",
+      "size": 21722,
+      "sha256": "adf8a77f77efc9038fbd9daed35e8927ba74e4142cb73156316813740370da54"
+    },
+    {
+      "path": "tests/test_b68_background_visible_live.cjs",
+      "size": 6621,
+      "sha256": "304281eaf216ebd9aa4658b9be2a749485c49cb27e79a7b0f387dae619df8c52"
+    },
+    {
+      "path": "tests/test_b68_dev_paint_live.cjs",
+      "size": 3014,
+      "sha256": "61686dd80b62140ba386e1e4b7ed5b62bb5b733e0c9dbc0e5d60dcade09135a7"
+    },
+    {
+      "path": "tests/test_b68_graphics_quality.cjs",
+      "size": 4104,
+      "sha256": "653a30b2e11282451e02cfdc309ecf35a01264639e9ccf4881b37eec1d44b74e"
+    },
+    {
+      "path": "tests/test_b68_graphics_transition_live.cjs",
+      "size": 19143,
+      "sha256": "8fd3dab807f23fa2220825cc8741813fc4457fb3295ea5cc49b78d81bb62f962"
+    },
+    {
+      "path": "tests/test_b68_map_adapter.cjs",
+      "size": 6556,
+      "sha256": "2b85b0990324a6b97b48d460f2bf51b133db48bfd086643bc6b861a3e0b55c13"
+    },
+    {
+      "path": "tests/test_b68_map_safety_live.cjs",
+      "size": 11267,
+      "sha256": "c1bf9b6c84ac9c3a65bf27d4e4b1e6c97aefbedda4b01fe9cee8bad72e924f3c"
+    },
+    {
+      "path": "tests/test_b68_map_visuals_live.cjs",
+      "size": 15428,
+      "sha256": "13d7b22d3f978b0b5de5196bac4f0b1b253f00d8fe286b9037bec1c2d6c38dc1"
+    },
+    {
+      "path": "tests/test_b68_passive_data.cjs",
+      "size": 2197,
+      "sha256": "7279d37044c2dcebb57b61f0bbb144b848aac4b240d9a6c958785a3b5197ab40"
+    },
+    {
+      "path": "tests/test_b68_quality_config.py",
+      "size": 1802,
+      "sha256": "fb9fa9fdd9974964d6a84e2f9ce3ff3a462f30ab6fd0f2722b35d1cf14cb3a83"
+    },
+    {
+      "path": "tests/test_b68_quality_log.cjs",
+      "size": 7826,
+      "sha256": "a993eca58988b74acbbd041318ba3064cf56ef79d8520b08ecafa442e30c525d"
+    },
+    {
+      "path": "tests/test_b68_quality_log_live.cjs",
+      "size": 6291,
+      "sha256": "600a91c74cc46ca918635bd78e12052edb5b99f4be104b8260789415bbd49cb0"
+    },
+    {
+      "path": "tests/test_b68_readiness.cjs",
+      "size": 5450,
+      "sha256": "fb091599937a24cc52d4b6bdde69aa9bc5e2c6fd36294a358f7b4ec3a2904376"
+    },
+    {
+      "path": "tests/test_b68_readiness_live.cjs",
+      "size": 7528,
+      "sha256": "6fbe0671606792207e61ecc6a29db08ea720614cc6c799fe254bde438223aef0"
+    },
+    {
+      "path": "tests/test_b68_recovery_background_live.cjs",
+      "size": 13169,
+      "sha256": "a54038413d1e7c6dca56515cf164c8ecabbc4f1a169cb7fd46c42edd394af165"
+    },
+    {
+      "path": "tests/test_b68_story_choices.cjs",
+      "size": 3555,
+      "sha256": "dd657ea9f5100ab9e96fcc20d3f8d1e138c7e306d11c0d580fd690bb5acd67f6"
+    },
+    {
+      "path": "tests/test_b68_story_choices_live.cjs",
+      "size": 17079,
+      "sha256": "9bf8dac2c9cf4973e451886f88fe36ee5c5d0402a97abd6d040d486cb96326cb"
+    },
+    {
+      "path": "tests/test_b68_story_love.cjs",
+      "size": 1829,
+      "sha256": "9193461f6f782fc3127cd52afb9bfac86994b6e8959301c104b7b42126a470b1"
+    },
+    {
+      "path": "tests/test_b68_story_love_live.cjs",
+      "size": 13171,
+      "sha256": "357cbf011196c9b1350bfb068fbc20d47faf0ae7993a55145d9ad77e69a9df34"
+    },
+    {
+      "path": "tests/test_b68_transition_config.py",
+      "size": 1496,
+      "sha256": "3fd4d4e15c5f6d292005a4edb665defabd6943a9e176502310cfff7420781a9a"
+    },
+    {
+      "path": "tests/test_b69_autosave_load_live.cjs",
+      "size": 6404,
+      "sha256": "2d510f7f31643ce0d59988e15d13b1d6c70d7e7cce8c0c3d094538ba31bb8660"
+    },
+    {
+      "path": "tests/test_b69_embark_scan_live.cjs",
+      "size": 15114,
+      "sha256": "f3967b6c1b7bbca02a52cb4dfa4211d78f6eeae887ca23fe19ea5ce1078d7ac0"
+    },
+    {
+      "path": "tests/test_b69_ending_actions_live.cjs",
+      "size": 9022,
+      "sha256": "6b6a9ffd60e694c4054a73a34b206756439ea09f5f55b59451e577908870111f"
+    },
+    {
+      "path": "tests/test_b69_global_viewport_live.cjs",
+      "size": 5294,
+      "sha256": "b9c515a3e256c24919c49bc21555c74c6702f0e0257f7a3dee3befa340ea028f"
+    },
+    {
+      "path": "tests/test_b69_perf_focus_dom_live.cjs",
+      "size": 4536,
+      "sha256": "e8c0536b40b9144a2bfa2edc1ee34031163b44e6293ef4b5bb5e80122fb4c3a3"
+    },
+    {
+      "path": "tests/test_b69_perf_focus_lifecycle_live.cjs",
+      "size": 6213,
+      "sha256": "29ecba1e6dce9b8ba0d475f832e2fa10e95e5f7e1bda950bfdf8bc1f7e0d19f9"
+    },
+    {
+      "path": "tests/test_b69_release_memory_live.cjs",
+      "size": 13168,
+      "sha256": "447ace08dd768cb17cb910f99ead30dfacdfa28c725d067b5f67e0f164f0f00b"
+    },
+    {
+      "path": "tests/test_b69_report_visual_live.cjs",
+      "size": 5668,
+      "sha256": "87edfb4e1c519961542e2568c381f4e6e892166696f5a27f5a224261522a857b"
+    },
+    {
+      "path": "tests/test_b69_retired_handles.cjs",
+      "size": 1823,
+      "sha256": "bd754b0b26f898308f32712d26b98c8079e66a40be00155fbb229e1680c96b18"
+    },
+    {
+      "path": "tests/test_b69_run_report.cjs",
+      "size": 1137,
+      "sha256": "eae6be2ecf8ed0eb1d85875ced262992c21c7c308af8cab91c6ad10c1e80e825"
+    },
+    {
+      "path": "tests/test_b69_run_report_live.cjs",
+      "size": 14701,
+      "sha256": "72db314fa377937a0824a02dc78ce58e6d4b9dda31a2e5aee0cf8a831af1add1"
+    },
+    {
+      "path": "tests/test_b69_story_actions_live.cjs",
+      "size": 17035,
+      "sha256": "072da10c1e1ad9c6a3f136588bc5a31baea8d608ec199fd674566acf08927c8d"
+    },
+    {
+      "path": "tests/test_b69_story_followup_live.cjs",
+      "size": 15982,
+      "sha256": "d7c1c56caea3a412d72c896c97524ee8276b2d13b07c5cb584c88b5ef1bcb744"
+    },
+    {
+      "path": "tests/test_b69_story_status_live.cjs",
+      "size": 11539,
+      "sha256": "bb9a7a98db7e17bb3e93d9f1ad260a28bc97fe3a9310b8ec6efb97d70725cb72"
+    },
+    {
+      "path": "tests/test_b69_story_update_routing.cjs",
+      "size": 2487,
+      "sha256": "029e4989cd86265447527e7e3bcc0807a02e301e09c572b5e03aa4077fd6b692"
+    },
+    {
+      "path": "tests/test_b6_accordion_live.cjs",
+      "size": 5324,
+      "sha256": "41ac2147a9cf99daa33c4fc2f61906dcafbe35cae7dfde39380f58663f74b8e3"
+    },
+    {
+      "path": "tests/test_b6_action_symbols_live.cjs",
+      "size": 5012,
+      "sha256": "900767fe4a22209ceb9aca9dfacb372ef9596eaaf42f4a6e62b8699a290dc17c"
+    },
+    {
+      "path": "tests/test_b6_actions_followup_live.cjs",
+      "size": 8575,
+      "sha256": "b50e78fdc0a3861bdff077a745b9c7b44b5777df6362a855565b350f983e9f66"
+    },
+    {
+      "path": "tests/test_b6_actions_live.cjs",
+      "size": 17532,
+      "sha256": "f2565c17cdba7e8fba419755bd665ab7ac65f453f7b6499fcc9559d155bf5551"
+    },
+    {
+      "path": "tests/test_b6_deck_live.cjs",
+      "size": 9386,
+      "sha256": "60e05545eaf299a23b0bac210161223903c65e79cdc78a3a3e777d5635700f2e"
+    },
+    {
+      "path": "tests/test_b6_hud_fit_live.cjs",
+      "size": 6349,
+      "sha256": "481e4dc7e06cb0cf6c091453a3873ac048eb7210b8b327877d3ee7dadd6e0fa8"
+    },
+    {
+      "path": "tests/test_b6_initial_actions_live.cjs",
+      "size": 6059,
+      "sha256": "60601b13b7e7c8515ad2a19f46d9e041daec0d1ab2ac7e407cbaa20e8f9fd625"
+    },
+    {
+      "path": "tests/test_b6_mods_foreground_live.cjs",
+      "size": 3038,
+      "sha256": "6b9c7e076f40fc0c21963a43c45dbe76221f8b9e0b36f479d9f957b6643965f4"
+    },
+    {
+      "path": "tests/test_b6_mods_live.cjs",
+      "size": 10941,
+      "sha256": "90031a65f855a7a9ffbe50c42cc90b774018410b84ef994adfdca209a6665c7f"
+    },
+    {
+      "path": "tests/test_b6_options_live.cjs",
+      "size": 4783,
+      "sha256": "8f0169d456f05c73674a6c7f6d5a38956add70e0e93cfcdbe3022b4dd4d86428"
+    },
+    {
+      "path": "tests/test_b6_pause_live.cjs",
+      "size": 7539,
+      "sha256": "9e0d66cdb6cea2061defd19d235e4abb53082e18aca9a24f831325f81ac5cafd"
+    },
+    {
+      "path": "tests/test_b6_performance_live.cjs",
+      "size": 12737,
+      "sha256": "23e4d42e61cc1e0bc3795cb5a1efa694fcd69df038f0fed1d118994690e7ada4"
+    },
+    {
+      "path": "tests/test_b6_prose_translation_live.cjs",
+      "size": 8310,
+      "sha256": "8f21cd87dc93c63484cd3d15aea3b89a84f05ff81b7479680796f7c932c510ff"
+    },
+    {
+      "path": "tests/test_b6_story_live.cjs",
+      "size": 9792,
+      "sha256": "6e892c75a4177d21360a3652154590df98026bac9251c7f42e7a642be7441775"
+    },
+    {
+      "path": "tests/test_b6_top_hud_live.cjs",
+      "size": 4351,
+      "sha256": "6bfc1a6133e707ebcd2eeece496a791de12435a83bd30af7241e014ad39ce5af"
+    },
+    {
+      "path": "tests/test_card_thumbnail_adapter.cjs",
+      "size": 2206,
+      "sha256": "c69236e80145dbe2f8c3362d4ec6970f978889524fb6880c2c12f8b206324aae"
+    },
+    {
+      "path": "tests/test_character_select.cjs",
+      "size": 11598,
+      "sha256": "a036a3f642f874cb25eb1da81883e66bdd6e4e4780d8541dbae643419317387f"
+    },
+    {
+      "path": "tests/test_character_select_live.cjs",
+      "size": 6843,
+      "sha256": "063258bef2c78ae8f2e427f26e1c5ce5132d549aca22fa803e535004dcbc5ef7"
+    },
+    {
+      "path": "tests/test_combat_adapter.cjs",
+      "size": 2305,
+      "sha256": "37854da037fdf97009af1b934fbc401359cdc0900a2f598acb9e8bb0910bfedb"
+    },
+    {
+      "path": "tests/test_compendium_options_layout.cjs",
+      "size": 5201,
+      "sha256": "a1cccbba27b5c674c33112205f1c9cda38047d351ad490db18ead8c6287011b3"
+    },
+    {
+      "path": "tests/test_compendium_unlock_bridge.cjs",
+      "size": 2205,
+      "sha256": "1d95fd8a20cf80e7e121669c9b7cc9d3c0fee7c01b91c894522e7a0ec506275a"
+    },
+    {
+      "path": "tests/test_display_config.cjs",
+      "size": 2702,
+      "sha256": "3de381284afcad526621226669ed40776d8e8c23f4d6a0d4020294130126245d"
+    },
+    {
+      "path": "tests/test_factory_reset.cjs",
+      "size": 5194,
+      "sha256": "2752dd21c727e272481f08af5a8120abb138a250f32fa8af29b76045fc4de79b"
+    },
+    {
+      "path": "tests/test_inject.py",
+      "size": 14511,
+      "sha256": "983738aefde745dbe2a014baee1320f8a387236566863d1e927c80524158e32d"
+    },
+    {
+      "path": "tests/test_logger.cjs",
+      "size": 6392,
+      "sha256": "59803847fbade7018492f34861e5090d74e4b0ad0ab7c913ded6e348abe99c2a"
+    },
+    {
+      "path": "tests/test_mobile_card_detail.cjs",
+      "size": 11319,
+      "sha256": "e105b2508f25a40891fa65c4bc3e9606aab1866297bf959c0a9df6b732500151"
+    },
+    {
+      "path": "tests/test_mobile_compendium.cjs",
+      "size": 20243,
+      "sha256": "1a42cfa0bb1ff309ca2a8702d77eac9153502b618e9152068ceab65def239287"
+    },
+    {
+      "path": "tests/test_mobile_layout.cjs",
+      "size": 2832,
+      "sha256": "2990aac57d94fb548a1267de5704c54ebc269a67e89da6659130fc4ae55b87c5"
+    },
+    {
+      "path": "tests/test_mobile_main_menu.cjs",
+      "size": 9425,
+      "sha256": "28333b8d0c8a88ef83193ebc5bac6a31dac3b6fa41fff9e98a83981a0bda2deb"
+    },
+    {
+      "path": "tests/test_mobile_settings.cjs",
+      "size": 6455,
+      "sha256": "a4a1251820ea3366bbc8c8c7d0e5a7db3853f91f0de0d15ffed2b8816eeb2578"
+    },
+    {
+      "path": "tests/test_mods.cjs",
+      "size": 3773,
+      "sha256": "eee36d82641cfee682151ea6d06764b2d7c372c130c29b847854d9c9a453038a"
+    },
+    {
+      "path": "tests/test_moonshine_assets_live.cjs",
+      "size": 2937,
+      "sha256": "6d1060fd3edfbfe149a13a3bb0be89e30d6f3bbc89aa76b432d4397207830940"
+    },
+    {
+      "path": "tests/test_moonshine_buffer.cjs",
+      "size": 3235,
+      "sha256": "2530538dfa1f0e1853e87d3520d0ed7612315e147a454ff3269e051a5ae7dace"
+    },
+    {
+      "path": "tests/test_moonshine_live.cjs",
+      "size": 4070,
+      "sha256": "1f2aa70d12000796e672d16bff8c9ed31c15950d9051279dfee841d70eac5965"
+    },
+    {
+      "path": "tests/test_rc1_cg_theia_live.cjs",
+      "size": 4575,
+      "sha256": "d11237051606c80ec85f91aad6f511c7b5d297e2859851f9f17d956a0d06182b"
+    },
+    {
+      "path": "tests/test_rc1_story_cg_live.cjs",
+      "size": 14685,
+      "sha256": "218568dd64e4ac4ba520b6f08a0d89a35661f1220436f3f0a44e544cde88677d"
+    },
+    {
+      "path": "tests/test_release.py",
+      "size": 6554,
+      "sha256": "a76163ffb1ff71793834e824e9462666ad891772f8996bef0f4738c9a9d876d8"
+    },
+    {
+      "path": "tests/test_release_theia.cjs",
+      "size": 5116,
+      "sha256": "d5409199ad2d0788c9020ae98ba40bff569b51821226b17a42b5c1cc0b59b4f2"
+    },
+    {
+      "path": "tests/test_save_confirm_bridge.cjs",
+      "size": 3227,
+      "sha256": "2b1bb88f344ba625b39fe96170271de4b6c73a087597b5e4d3d3aac73b6a66fd"
+    },
+    {
+      "path": "tests/test_story_scan.cjs",
+      "size": 3614,
+      "sha256": "2a49e0b72b89d19dd9b618c46ffcc84f791059c50c9d0c98338ad709a907602f"
+    },
+    {
+      "path": "tests/test_symbols_font_events.cjs",
+      "size": 994,
+      "sha256": "281d7055247b0aca01f36da5678cd5366f6dec5ffd8984b6542924f739ffd75c"
+    },
+    {
+      "path": "tests/test_transition_command_boundary.cjs",
+      "size": 1308,
+      "sha256": "04a399e1465fdeb13ec6c8aed4cb269953a0c410fa3b4cf59e8d1df139e32022"
+    },
+    {
+      "path": "tests/test_transitions.cjs",
+      "size": 3165,
+      "sha256": "e401337d712c2c508b722013a529102ba9eca5e046eeec9df15bd16600d7c5b4"
+    },
+    {
+      "path": "transition_seizure_proetection.md",
+      "size": 4848,
+      "sha256": "c844b6da49f296ea0f543377c8f3fe8b8f9ab8eb3fdca5721da05fc9f0b1c115"
+    }
+  ]
+}

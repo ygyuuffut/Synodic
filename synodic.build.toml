@@ -1,0 +1,5 @@
+# SYNODIC Runtime build identity. Module/API versions remain in their own manifests.
+[build]
+version = "1.0.0-rc2"
+# Change this label when distinguishing builds of the same release.
+revision = "rc2-cg-return-2026-10-10"
