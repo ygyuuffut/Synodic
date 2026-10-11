@@ -1,0 +1,17 @@
+#MOONSHINE-recovery{position:fixed;inset:0;margin:0;width:100%;height:100dvh;max-width:none;max-height:none;border:0;padding:max(20px,env(safe-area-inset-top)) 7vw max(20px,env(safe-area-inset-bottom));z-index:2147483647;background:#0b0b0cf2;color:#ad94d0;display:grid;place-items:center;font:400 clamp(16px,3.9vw,24px)/1.2 var(--SYNODIC-font-ui,system-ui);box-sizing:border-box;}
+#MOONSHINE-recovery::backdrop{background:#0b0b0c;}
+#MOONSHINE-recovery *{box-sizing:border-box;}
+#MOONSHINE-recovery .MOONSHINE-recovery-panel{width:min(100%,540px);height:min(85dvh,900px);min-height:0;display:grid;grid-template-rows:auto auto auto minmax(0,1fr) auto;border:1px solid #9554ff;border-radius:28px;overflow:hidden;background:linear-gradient(145deg,#362e44,#292333);}
+#MOONSHINE-recovery h1{margin:8px 12px;font-size:clamp(26px,6vw,36px);font-weight:600;text-align:center;color:#c8bdd7;}
+#MOONSHINE-recovery p{margin:8px 14px;text-align:center;}
+#MOONSHINE-recovery .MOONSHINE-recovery-error{margin:6px 0 0;padding:12px 10px;min-height:0;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;text-align:left;background:#1f1a29;color:#ff7878;font:400 clamp(14px,3.6vw,23px)/1.2 var(--SYNODIC-font-mono,monospace);}
+#MOONSHINE-recovery footer{padding:4px 12px 10px;display:grid;gap:8px;}
+#MOONSHINE-recovery button{width:100%;min-height:44px;border:1px solid #c8bdd7;border-radius:999px;padding:12px;background:transparent;color:#c8bdd7;font:600 clamp(18px,4.2vw,26px)/1.2 var(--SYNODIC-font-ui,system-ui);cursor:pointer;}
+#MOONSHINE-recovery .MOONSHINE-recovery-restart{background:#634398;border-color:#634398;}
+#MOONSHINE-recovery .MOONSHINE-recovery-notice:empty{display:none;}
+
+#MOONSHINE-recovery-acknowledgment{position:fixed;inset:0;margin:0;width:100%;height:100dvh;max-width:none;max-height:none;border:0;padding:24px;z-index:2147483647;display:grid;place-items:center;background:#0b0b0cf2;color:#ad94d0;font:400 18px/1.3 var(--SYNODIC-font-ui,system-ui);box-sizing:border-box;}
+#MOONSHINE-recovery-acknowledgment::backdrop{background:#0b0b0c;}
+#MOONSHINE-recovery-acknowledgment article{width:min(100%,520px);padding:24px 16px;border:1px solid #9554ff;border-radius:28px;background:#322a40;box-sizing:border-box;}
+#MOONSHINE-recovery-acknowledgment pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#ff7878;font:400 16px/1.2 var(--SYNODIC-font-mono,monospace);}
+#MOONSHINE-recovery-acknowledgment button{display:block;width:100%;min-height:48px;border:0;border-radius:999px;background:#634398;color:#c8bdd7;font:400 20px var(--SYNODIC-font-ui,system-ui);}

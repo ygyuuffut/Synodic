@@ -1,0 +1,10 @@
+#MOONSHINE-card-overlay{position:absolute;inset:0;z-index:2;display:grid;place-items:center;box-sizing:border-box;padding:12px 3vw;background:rgba(0,0,0,.78);pointer-events:auto;overscroll-behavior:contain;}
+#MOONSHINE-card-overlay #MOONSHINE-card-panel{width:100%;max-height:calc(var(--card-panel-vh,100dvh) - 24px);display:grid;grid-template-rows:minmax(0,1fr) auto;box-sizing:border-box;overflow:hidden;border:1px solid #aa92cf;border-radius:12px;background:rgba(36,31,46,.96);color:#aa92cf;font:400 clamp(15px,4.4vw,24px)/1.1 var(--SYNODIC-font-ui);pointer-events:auto;}
+#MOONSHINE-card-overlay #MOONSHINE-card-panel *{box-sizing:border-box;}
+#MOONSHINE-card-panel>.MOONSHINE-combat-hand-scroll{margin:0 10px;padding:0 0 4px;min-height:0;}
+#MOONSHINE-card-overlay #MOONSHINE-card-panel>footer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr) minmax(0,1fr);gap:6px;align-items:center;border-top:1px solid #aa92cf;padding:5px 8px;min-height:34px;}
+#MOONSHINE-card-panel>footer>span{font-family:var(--SYNODIC-font-mono);text-align:center;min-width:0;overflow-wrap:normal;}
+#MOONSHINE-card-overlay #MOONSHINE-card-panel>footer>button{margin:0;min-height:0;min-width:0;padding:2px 6px;border:1px solid #aa92cf;border-radius:999px;color:#aa92cf;background:transparent;font:600 1em/1.05 var(--SYNODIC-font-ui);}
+#MOONSHINE-card-overlay #MOONSHINE-card-panel>footer>button[data-card-panel-action="confirm"]{background:#aa92cf;color:#292230;}
+#MOONSHINE-card-overlay #MOONSHINE-card-panel>footer>button:disabled{border-color:#39363c;background:#29272b;color:#535057;}
+#MOONSHINE-card-panel [hidden]{display:none!important;}

@@ -1,0 +1,16 @@
+#MOONSHINE-root #MOONSHINE-result{position:fixed;inset:0;z-index:2147483646;display:grid;place-items:center;box-sizing:border-box;padding:max(12px,env(safe-area-inset-top)) 6.5vw max(12px,env(safe-area-inset-bottom));background:#0009;color:#bdb5ce;font:400 clamp(13px,3.8vw,20px)/1.2 var(--SYNODIC-font-ui);pointer-events:auto;}
+#MOONSHINE-result *{box-sizing:border-box;}
+#MOONSHINE-result .MOONSHINE-result-panel{display:grid;grid-template-rows:minmax(0,1fr) auto minmax(0,1fr);width:100%;max-width:480px;height:auto;aspect-ratio:.82;min-height:0;max-height:100%;padding:clamp(20px,6vw,36px) clamp(14px,5vw,28px) clamp(20px,6vw,36px);border:1px solid #9354ff;border-radius:clamp(28px,9vw,44px);background:radial-gradient(ellipse at 50% 45%,#353042,#2c273a);overflow:hidden;}
+#MOONSHINE-result .MOONSHINE-result-header{min-height:0;display:flex;flex-direction:column;gap:12px;text-align:center;overflow:hidden;}
+#MOONSHINE-result .MOONSHINE-result-title{font:600 1.45em/1.15 var(--SYNODIC-font-ui);margin:0;}
+#MOONSHINE-result .MOONSHINE-result-quote{overflow:auto;min-height:0;color:#ad95d4;font:400 .9em/1.2 var(--SYNODIC-font-ui);overscroll-behavior:contain;}
+#MOONSHINE-result .MOONSHINE-result-rewards{display:grid;gap:12px;margin:16px -5px;}
+#MOONSHINE-result .MOONSHINE-result-rewards-label{font:600 1em/1.2 var(--SYNODIC-font-ui);color:#ad95d4;text-align:center;margin:0;}
+#MOONSHINE-result .MOONSHINE-result-reward-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(7px,2vw,12px);}
+#MOONSHINE-result .MOONSHINE-result-reward{display:grid;grid-template-columns:1fr 2fr;align-items:center;min-width:0;border-radius:999px;padding:2px 7px;color:#2d273c;background:#f3d660;}
+#MOONSHINE-result [data-kind="grace"]{background:#80b5f5;}#MOONSHINE-result [data-kind="chaos"]{background:#e46b2c;}
+#MOONSHINE-result .MOONSHINE-result-icon{font:400 1.15em/1 var(--SYNODIC-font-emoji);text-align:center;}
+#MOONSHINE-result .MOONSHINE-result-value{font:700 1.35em/1.1 var(--SYNODIC-font-mono);text-align:center;overflow-wrap:anywhere;}
+#MOONSHINE-result .MOONSHINE-result-footer{display:flex;flex-direction:column;justify-content:flex-end;gap:7px;min-height:0;}
+#MOONSHINE-result .MOONSHINE-result-button{width:100%;border:0;border-radius:999px;background:#604191;color:#c5b8dd;padding:4px 9px!important;min-height:0!important;font:600 .95em/1.2 var(--SYNODIC-font-ui);cursor:pointer;}
+#MOONSHINE-result .MOONSHINE-result-button:disabled{opacity:.4;cursor:default;}#MOONSHINE-result button:focus-visible{outline:2px solid #e8deff;outline-offset:2px;}

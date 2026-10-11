@@ -1,0 +1,10 @@
+[mod]
+mod.title = "Synodic Moonshine"
+mod.author = "M.N. Tristone (弎石)"
+mod.description =    """
+                        A Synodic Core Dependency
+                        The Synodic Default Appearance
+                        Designed for STG
+                        """
+mod.version = "1.0"
+mod.lunar.api.requirement = ">=1.0"

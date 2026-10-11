@@ -1,0 +1,18 @@
+/* Owned scan regions, accessible inputs and stable translatable reports. */
+(function(){'use strict';var C=MOONSHINE_ACTION_COMPONENTS;
+ function row(report){var box=C.element('section','scan-report'),label=C.element('div','scan-report-label',report.label),body=C.element('p','scan-report-body',report.body);label.hidden=!report.label;box.append(label,body);box.dataset.reportId=report.id;box._source=report.text;return box;}
+ function create(value){
+  var scrim=C.element('section','scan-scrim'),panel=C.element('article','scan-panel');scrim.setAttribute('role','dialog');scrim.setAttribute('aria-modal','true');scrim.setAttribute('aria-labelledby','MOONSHINE-scan-title');
+  var title=C.element('h1','scan-title',value.title);title.id='MOONSHINE-scan-title';
+  var scannerLabel=C.element('h2','scan-section-label','Scanner'),scanner=C.element('div','scan-scanner'),field=C.element('div','scan-field'),image=C.element('img','scan-image'),fallback=C.element('p','scan-fallback','Image unavailable. The scanner remains usable.'),targets=C.element('div','scan-targets');
+  var scannerHead=C.element('header','scan-scanner-head'),inspect=C.button('VIEW CG','scan-inspect');inspect.dataset.intent='inspect';inspect.hidden=!value.complete;scannerHead.append(scannerLabel,inspect);
+  scannerLabel.id='MOONSHINE-scanner-label';scanner.setAttribute('aria-labelledby',scannerLabel.id);image.dataset.msComponent='art';image.dataset.msArtRole='cg';image.alt='';image.decoding='async';image.draggable=false;fallback.hidden=true;field.append(image,fallback,targets);scanner.append(field);
+  var reportsLabel=C.element('h2','scan-section-label','Scan Reports'),reports=C.element('div','scan-reports');reportsLabel.id='MOONSHINE-scan-reports-label';reports.setAttribute('aria-labelledby',reportsLabel.id);reports.tabIndex=0;
+  (value.headerReports||[]).forEach(function(report){reports.append(row(report));});var rows=value.reports.map(function(report){var box=row(report);reports.append(box);return box;});var trait=C.element('p','scan-report');trait.hidden=true;reports.append(trait);
+  var footer=C.element('footer','scan-footer'),back=C.button('Return','scan-return'),freeze=C.button('Freeze','scan-freeze'),complete=C.symbol('✔','Capture complete');back.dataset.intent='return';freeze.dataset.intent='freeze';freeze.hidden=!value.freezeAvailable;complete.classList.add('MOONSHINE-scan-complete');complete.hidden=!value.complete||!!value.readOnly;complete.setAttribute('role','img');complete.removeAttribute('aria-hidden');complete.setAttribute('aria-label','Capture complete');footer.append(freeze,back,complete);
+  panel.append(title,scannerHead,scanner,reportsLabel,reports,footer);scrim.append(panel);
+  return {scrim:scrim,panel:panel,title:title,scanner:scanner,field:field,image:image,fallback:fallback,targets:targets,reports:reports,rows:rows,trait:trait,back:back,freeze:freeze,complete:complete,inspect:inspect};
+ }
+ function patch(view,value){value.reports.forEach(function(report,i){var row=view.rows[i];if(row&&row._source!==report.text){row.querySelector('.MOONSHINE-scan-report-label').textContent=report.label;row.querySelector('.MOONSHINE-scan-report-body').textContent=report.body;row._source=report.text;}if(row)row.dataset.unlocked=String(report.unlocked);});var trait=value.trait.join('\n');if(view.trait._source!==trait){view.trait.textContent=trait;view.trait._source=trait;}view.trait.hidden=!trait;view.complete.hidden=!value.complete||!!value.readOnly;view.inspect.hidden=!value.complete;view.freeze.hidden=!value.freezeAvailable;view.targets.hidden=value.complete;view.scanner.dataset.complete=String(value.complete);}
+ window.MOONSHINE_SCAN_COMPONENTS=Object.freeze({create:create,patch:patch});
+})();

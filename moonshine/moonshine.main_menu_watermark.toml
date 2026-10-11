@@ -1,0 +1,10 @@
+[watermark]
+watermark.text = "SYNODIC 1.0.0-rc2"
+watermark.position = "bottom left"
+# supports: bottom left, bottom right, top left, and top right
+watermark.opacity = 0.5
+# between 0 and 1
+watermark.font.name = "JetBrains Mono"
+watermark.font.weight = 400
+watermark.font.size = 18
+# unit is px

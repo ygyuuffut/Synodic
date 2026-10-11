@@ -1,0 +1,15 @@
+/* Presentation-only geometry invalidation. External translation stays here. */
+(function(){'use strict';var queue=new Map(),scheduled=false,observer,paused=0;
+ var boundary='[data-stg-hud-value],[data-lunar-story-id],[data-ms-class~="arc-dlg-opt"],.MOONSHINE-action-card,.MOONSHINE-mod-card,.MOONSHINE-actions-story-prose,[data-ms-component="card"],[data-ms-component="panel"],[data-ms-component="symbol"]';
+ function owner(node){var el=node&&node.nodeType===1?node:node&&node.parentElement;if(!el||!el.closest('[data-MOONSHINE-owned]')||el.closest('[data-ms-css-layout]'))return null;return el.closest(boundary)||el.closest('[data-ms-component]')||el;}
+ function mark(el,reason){if(!el||!el.isConnected)return;var current=queue.get(el);if(!current){var first=!queue.size;queue.set(el,new Set([reason||'geometry']));if(first)LUNAR.api.moonshine.logger.scope('MOONSHINE.geometry').debug('GEOMETRY_INVALIDATE',{reason:reason||'geometry',key:el.dataset&&el.dataset.msKey});}else current.add(reason||'geometry');if(!scheduled){scheduled=true;LUNAR.api.moonshine.timing.ui(function(){requestAnimationFrame(function(){scheduled=false;flush();});});}}
+ function styleGeometry(record){var before=record.oldValue||'',after=record.target.getAttribute('style')||'';function geometry(s){return s.split(';').filter(function(p){return /^(?:\s*)(?:font(?:-[\w-]+)?|width|height|min-width|max-width|min-height|max-height|padding(?:-[\w-]+)?|zoom)\s*:/.test(p);}).join(';');}return geometry(before)!==geometry(after);}
+ function external(records){records.forEach(function(r){var el=owner(r.target);if(!el)return;if(r.type==='attributes'&&!((r.attributeName==='style'&&styleGeometry(r))||r.attributeName==='lang'||r.attributeName==='dir'))return;mark(el,r.type==='attributes'?'geometry':'external-text');});}
+ function observe(){if(observer)observer.observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeOldValue:true,attributeFilter:['style','lang','dir']});}
+ function begin(){if(paused++===0&&observer){external(observer.takeRecords());observer.disconnect();}}
+ function end(){if(paused&&!--paused)observe();}
+ function flush(){if(!queue.size)return;var entries=Array.from(new Set(Array.from(queue.keys()).filter(function(el){return el.isConnected;}).map(function(el){return owner(el)||el;})));entries=entries.filter(function(el){return !entries.some(function(other){return other!==el&&other.contains(el);});});queue.clear();begin();try{MOONSHINE_COMPONENTS.fit(entries);entries.forEach(function(el){if(el.matches('.MOONSHINE-actions-symbol')||el.querySelector('.MOONSHINE-actions-symbol'))MOONSHINE_ACTION_COMPONENTS.fitSymbols(el);});}finally{end();}return entries;}
+ function invalidateAll(reason){document.querySelectorAll('[data-MOONSHINE-owned] '+boundary.split(',').join(',[data-MOONSHINE-owned] ')).forEach(function(el){mark(el,reason);});}
+ observer=new MutationObserver(external);observe();
+ window.MOONSHINE_GEOMETRY={mark:mark,owner:owner,begin:begin,end:end,flush:flush,invalidateAll:invalidateAll};
+})();

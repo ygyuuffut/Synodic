@@ -1,0 +1,56 @@
+[class^="MOONSHINE-"][data-ms-pure="true"][data-ms-component="button"] {display:flex;align-items:center;justify-content:center;min-height:36px;padding:6px 12px;border:1px solid var(--ms-color);border-radius:999px;background:var(--ms-background,transparent);color:var(--ms-color);font:400 var(--ms-font-size,16px)/1.2 var(--ms-font);text-align:center;}
+[class^="MOONSHINE-"][data-ms-pure="true"][data-ms-component="button"]:disabled {opacity:.4;cursor:default;}
+[class^="MOONSHINE-"][data-ms-pure="true"][data-ms-component="panel"] {display:grid;grid-template-rows:auto minmax(0,1fr) auto;min-height:0;padding:12px;border:1px solid var(--ms-color);border-radius:18px;background:var(--ms-panel);color:var(--ms-color);max-height:calc(var(--stg-mobile-vh,100dvh) - 16px);}
+[class^="MOONSHINE-"][data-ms-pure="true"][data-ms-component="scroll"] {overflow:auto;}
+[class^="MOONSHINE-"][data-ms-pure="true"][data-ms-component="card"] {display:grid;min-width:0;width:var(--ms-width,100%);aspect-ratio:var(--ms-aspect,3/4);border:1px solid var(--ms-color);border-radius:12px;overflow:hidden;background:var(--ms-panel);}
+[class^="MOONSHINE-"][data-ms-pure="true"][data-ms-component="pill"] {display:flex;align-items:center;justify-content:center;min-height:28px;padding:4px 10px;border:1px solid var(--ms-color);border-radius:999px;background:var(--ms-background,var(--ms-panel));color:var(--ms-color);}
+[class^="MOONSHINE-"][data-ms-pure="true"][data-ms-component="symbol"] {display:grid;place-items:center;min-width:0;min-height:0;overflow:hidden;color:var(--ms-color);font:400 var(--ms-font-size,24px)/1 var(--SYNODIC-font-emoji);}
+[class^="MOONSHINE-"][data-ms-pure="true"][data-ms-component="number"] {min-width:0;text-align:center;white-space:nowrap;color:var(--ms-color);font:600 var(--ms-font-size,24px)/1 var(--SYNODIC-font-mono);}
+[class^="MOONSHINE-"][data-ms-pure="true"][data-ms-component="slider"] {width:100%;min-height:24px;accent-color:var(--ms-color);}
+[class^="MOONSHINE-"][data-ms-pure="true"][data-ms-selected="true"] {background:var(--ms-color);color:var(--ms-panel);}
+
+/* Mobile Mods: a viewport root is fixed; controls use Grid/Flex, never offsets. */
+#MOONSHINE-mods-root {position:fixed;inset:0 auto auto 0;display:grid;grid-template: minmax(0,1fr) / minmax(0,1fr);z-index:2147483647;pointer-events:none;color:#ab92d2;font:400 18px/1.2 var(--SYNODIC-font-ui);}
+#MOONSHINE-mods-root, #MOONSHINE-mods-root * {box-sizing:border-box;}
+#MOONSHINE-mods-root [hidden] {display:none;}
+#MOONSHINE-mods-root .MOONSHINE-mods-launcher {grid-area:1/1;align-self:end;justify-self:end;margin:0 max(18px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) 0;pointer-events:auto;width:50px;height:50px;min-height:0;padding:7px;border:1px solid #9270c4;border-radius:50%;background:#14101bd9;color:#ab92d2;display:grid;place-items:center;}
+#MOONSHINE-mods-root .MOONSHINE-mods-launcher[hidden] {display:none;}
+#MOONSHINE-mods-root .MOONSHINE-actions-symbol {display:grid;grid-template: minmax(0,1fr) / minmax(0,1fr);place-items:center;min-width:0;min-height:0;width:100%;height:100%;overflow:hidden;}
+#MOONSHINE-mods-root .MOONSHINE-actions-glyph {grid-area:1/1;min-width:0;min-height:0;font:400 30px/1 var(--SYNODIC-font-emoji);font-variant-emoji:text;}
+#MOONSHINE-mods-root .MOONSHINE-mods-scrim {grid-area:1/1;display:grid;place-items:stretch;padding:max(6vh,env(safe-area-inset-top)) max(5vw,env(safe-area-inset-right)) max(6vh,env(safe-area-inset-bottom)) max(5vw,env(safe-area-inset-left));min-width:0;min-height:0;background:#0008;pointer-events:auto;}
+#MOONSHINE-mods-root .MOONSHINE-mods-panel {display:grid;grid-template-rows:auto minmax(0,1fr) auto;min-width:0;min-height:0;overflow:hidden;border:1px solid #9654f3;border-radius:22px;background:linear-gradient(135deg,#302939,#1e1927);color:#ab92d2;}
+#MOONSHINE-mods-root .MOONSHINE-mods-head {padding:10px 8px 12px;text-align:center;background:#4a3e5a33;}
+#MOONSHINE-mods-root .MOONSHINE-mods-title {margin:0;font:600 25px/1.25 var(--SYNODIC-font-ui);}
+#MOONSHINE-mods-root .MOONSHINE-mods-note {margin:6px 0 0;font:400 15px/1.3 var(--SYNODIC-font-ui);color:#9676c6;}
+#MOONSHINE-mods-root .MOONSHINE-mods-list {min-width:0;min-height:0;overflow:auto;overscroll-behavior:contain;padding:12px 10px;display:flex;flex-direction:column;gap:10px;scrollbar-width:thin;}
+#MOONSHINE-mods-root .MOONSHINE-mod-card {flex:none;min-width:0;margin:0;border:1px solid currentColor;border-radius:999px;overflow:hidden;color:#4fbd5e;background:#201c27;}
+#MOONSHINE-mods-root .MOONSHINE-mod-card[data-status="disabled"],#MOONSHINE-mods-root .MOONSHINE-mod-card[data-status="outdated"] {color:#b63434;}
+#MOONSHINE-mods-root .MOONSHINE-mod-card.MOONSHINE-action-selected {color:#f4d85e;}
+#MOONSHINE-mods-root .MOONSHINE-mod-card.MOONSHINE-action-open {border-radius:22px;}
+#MOONSHINE-mods-root .MOONSHINE-mod-summary {width:100%;min-height:40px;display:grid;grid-template-columns:28px minmax(0,1fr) 28px;align-items:center;gap:5px;padding:4px 8px;border:0;background:transparent;color:inherit;font:400 19px/1.25 var(--SYNODIC-font-ui);border-radius:0;}
+#MOONSHINE-mods-root .MOONSHINE-mod-summary .MOONSHINE-actions-symbol {width:28px;height:28px;align-self:start;justify-self:center;}
+#MOONSHINE-mods-root .MOONSHINE-mod-summary .MOONSHINE-actions-glyph {font-size:27px;}
+#MOONSHINE-mods-root .MOONSHINE-mod-title {min-width:0;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+#MOONSHINE-mods-root .MOONSHINE-action-open .MOONSHINE-mod-title {white-space:normal;overflow-wrap:anywhere;}
+#MOONSHINE-mods-root .MOONSHINE-mod-info {color:#ab92d2;background:#4a3e5a33;padding:0 8px 9px;text-align:center;font:400 12px/1.2 var(--SYNODIC-font-mono);overflow-wrap:anywhere;}
+#MOONSHINE-mods-root .MOONSHINE-mod-description {height:clamp(90px,16vh,150px);overflow:auto;overscroll-behavior:contain;white-space:pre-wrap;overflow-wrap:anywhere;padding:8px;color:#ab92d2;background:#232520;font:400 12px/1.25 var(--SYNODIC-font-mono);scrollbar-width:thin;}
+#MOONSHINE-mods-root .MOONSHINE-mod-footer {padding:7px;display:flex;justify-content:flex-end;background:#4a3e5a33;}
+#MOONSHINE-mods-root .MOONSHINE-mod-status {min-height:26px;min-width:145px;max-width:100%;padding:3px 12px;border:1px solid transparent;border-radius:999px;background:#4fbd5e;color:#18251b;font:400 13px/1.2 var(--SYNODIC-font-ui);}
+#MOONSHINE-mods-root .MOONSHINE-mod-status[data-status="disabled"] {background:#af3434;color:#230e0e;}
+#MOONSHINE-mods-root .MOONSHINE-mod-status[data-status="outdated"] {background:transparent;color:#af3434;border-color:#af3434;opacity:1;}
+#MOONSHINE-mods-root .MOONSHINE-mod-status[data-status="core"] {background:transparent;color:#67626c;border-color:#67626c;opacity:.7;}
+#MOONSHINE-mods-root .MOONSHINE-mods-footer {display:grid;place-items:center;padding:10px;background:#4a3e5a33;}
+#MOONSHINE-mods-root .MOONSHINE-mods-close {min-height:48px;width:min(180px,70%);border:1px solid #9270c4;border-radius:999px;background:transparent;color:#ab92d2;font:400 18px/1.2 var(--SYNODIC-font-ui);}
+#MOONSHINE-mods-root .MOONSHINE-mods-footer {grid-template-columns:repeat(2,minmax(0,1fr));gap:8px clamp(8px,4vw,24px);min-width:0;}
+#MOONSHINE-mods-root .MOONSHINE-mods-export {box-sizing:border-box;min-height:48px;width:min(320px,100%);padding:8px 16px;border:1px solid #9270c4;border-radius:999px;background:transparent;color:#ab92d2;font:400 16px/1.25 var(--SYNODIC-font-ui);white-space:normal;overflow-wrap:anywhere;}
+#MOONSHINE-mods-root .MOONSHINE-mods-export:disabled {opacity:.5;}
+#MOONSHINE-mods-root .MOONSHINE-mods-footer :is(.MOONSHINE-mods-export,.MOONSHINE-mods-close) {align-self:stretch;justify-self:stretch;width:100%;min-width:0;padding:8px 10px;white-space:normal;overflow-wrap:anywhere;}
+#MOONSHINE-mods-root .MOONSHINE-mods-export-status {grid-column:1/-1;margin:0;max-width:100%;color:#ab92d2;font:400 13px/1.3 var(--SYNODIC-font-ui);overflow-wrap:anywhere;text-align:center;}
+#MOONSHINE-mods-root .MOONSHINE-mods-export-status:empty {display:none;}
+#MOONSHINE-mods-root button:focus-visible,#MOONSHINE-mods-root .MOONSHINE-mod-description:focus-visible {outline:2px solid #f4d85e;outline-offset:-3px;}
+#MOONSHINE-mods-root .MOONSHINE-mod-detail {display:none;opacity:0;transition:opacity 140ms linear;}
+#MOONSHINE-mods-root .MOONSHINE-action-open .MOONSHINE-mod-detail {display:block;}
+#MOONSHINE-mods-root .MOONSHINE-action-revealed .MOONSHINE-mod-detail {opacity:1;}
+@media(prefers-reduced-motion:reduce){#MOONSHINE-mods-root .MOONSHINE-mod-detail {transition:none;}}
+
+#MOONSHINE-mods-root .MOONSHINE-mod-card:not(.MOONSHINE-action-open) .MOONSHINE-mod-title {justify-self:center;max-width:100%;text-align:left;}

@@ -1,0 +1,27 @@
+/* Same native panel/background/scroll owner; only map-space cropping and node UI. */
+#MOONSHINE-root [data-ms-map-slot]{padding:16px 12px!important;overflow:visible!important;}
+.MOONSHINE-map-canvas{position:relative;width:100%;min-height:180px;font-family:var(--SYNODIC-font-ui,system-ui);}
+.MOONSHINE-map-edges{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;}
+.MOONSHINE-map-edges line{stroke:rgba(138,104,152,.35);stroke-width:3;stroke-linecap:round;}
+.MOONSHINE-map-edges line[data-emphasized=true]{stroke:rgba(255,136,204,.70);stroke-width:5;}
+#MOONSHINE-root .MOONSHINE-map-node{position:absolute;transform:translate(-50%,-50%);width:calc(clamp(48px,12vw,70px) / var(--ms-native-scale,1));height:calc(clamp(44px,10vw,58px) / var(--ms-native-scale,1));margin:0;padding:0;background:transparent;border:0;border-radius:10px;box-shadow:none;min-width:0;min-height:44px;overflow:visible;transition:filter 140ms,opacity 140ms;font-family:inherit;cursor:default;color:#ae91d5;}
+.MOONSHINE-map-node>svg{display:block;width:100%;height:100%;overflow:visible;pointer-events:none;}
+.MOONSHINE-map-node[data-current=false][data-available=false]{filter:brightness(.65);}
+.MOONSHINE-map-node[data-cleared=true][data-current=false]{filter:brightness(.65);}
+.MOONSHINE-map-node[data-available=true]{cursor:pointer!important;filter:drop-shadow(0 0 4px #b399e8);}
+.MOONSHINE-map-node[data-current=true]{filter:drop-shadow(0 0 6px #d0b1ff);}
+.MOONSHINE-map-node[data-current=true]>svg>rect{stroke-width:3;}
+.MOONSHINE-map-node:focus-visible{outline:2px solid #f7d971;outline-offset:5px;}
+.MOONSHINE-map-label{position:absolute;top:calc(100% + 3px);left:50%;transform:translateX(-50%);width:max-content;max-width:110px;white-space:normal;text-align:center;font-size:calc(clamp(11px,3vw,15px) / var(--ms-native-scale,1));line-height:1.15;color:#cdc0e0;text-shadow:0 1px 3px #000;pointer-events:none;}
+.MOONSHINE-map-cleared{position:absolute;right:-5px;bottom:-5px;width:17px;height:17px;display:grid;place-items:center;background:#163322;border:1px solid #75b982;border-radius:50%;color:#a4e5ad;font:700 12px var(--SYNODIC-font-mono,monospace);}
+.MOONSHINE-map-marker{position:absolute;right:-6px;top:-7px;width:18px;height:18px;border-radius:50%;border:2px solid #d0b1ff;background:#261c36;overflow:hidden;box-shadow:0 0 5px #b399e8;pointer-events:none;}
+#MOONSHINE-root .MOONSHINE-map-portrait{position:absolute;inset:0;display:block;width:100%!important;height:100%!important;min-width:100%;min-height:100%;max-width:none!important;max-height:none!important;margin:0!important;padding:0!important;object-fit:cover;object-position:center;border:0;border-radius:0;}
+.MOONSHINE-map-canvas [hidden]{display:none!important;}
+.MOONSHINE-location-legend{display:flex!important;flex-direction:column;flex-wrap:nowrap!important;gap:10px!important;max-height:220px!important;overflow-y:auto!important;}
+.MOONSHINE-location-legend-item{display:flex;align-items:flex-start;gap:12px;min-height:36px;flex:0 0 auto;}
+.MOONSHINE-location-legend-shape{width:42px!important;height:34px!important;flex:0 0 42px!important;}
+.MOONSHINE-location-legend-shape svg{display:block;width:100%!important;height:100%!important;}
+.MOONSHINE-location-legend-copy{min-width:0;display:flex;flex-direction:column;gap:3px;}
+.MOONSHINE-location-legend-description{font-size:12px;line-height:1.25;color:#b8a7cc;}
+
+#MOONSHINE-root#MOONSHINE-root[data-presentation-mode="MAP"] [data-ms-class~="mapscreen-body"]{padding-left:calc(12px / var(--ms-native-scale,1))!important;padding-right:calc(12px / var(--ms-native-scale,1))!important;}

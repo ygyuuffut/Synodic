@@ -1,0 +1,158 @@
+/* Original presentation disabled by the MOONSHINE owner. LUNAR only tags source identities. */
+body:has(#MOONSHINE-root),body:has(#MOONSHINE-root) [data-MOONSHINE-owned] {touch-action:manipulation;}
+#MOONSHINE-root [data-lunar-control-role="story.skipIntro"] {display:none !important;}
+/* Suppress stale prose immediately throughout textless beats/reveal gaps.
+   visibility also wins over a copied opacity animation without replacing it. */
+#MOONSHINE-root [data-ms-story-held] {visibility:hidden !important;opacity:0 !important;pointer-events:none !important;}
+body:has(#MOONSHINE-root) [data-lunar-source] {visibility:hidden !important;pointer-events:none !important;}
+
+/* The owned overlay must paint above the main root (2147483646), like Mods.
+   Configuration is applied to a stable text node outside compatibility roots. */
+#MOONSHINE-main-menu-watermark {position:fixed;left:0;top:0;z-index:2147483647;display:flex;box-sizing:border-box;pointer-events:none;overflow:hidden;padding:max(4px,env(safe-area-inset-top)) max(8px,env(safe-area-inset-right)) max(4px,env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left));}
+#MOONSHINE-main-menu-watermark[hidden] {display:none;}
+#MOONSHINE-main-menu-watermark[data-position="bottom left"] {align-items:flex-end;justify-content:flex-start;}
+#MOONSHINE-main-menu-watermark[data-position="bottom right"] {align-items:flex-end;justify-content:flex-end;}
+#MOONSHINE-main-menu-watermark[data-position="top left"] {align-items:flex-start;justify-content:flex-start;}
+#MOONSHINE-main-menu-watermark[data-position="top right"] {align-items:flex-start;justify-content:flex-end;}
+#MOONSHINE-main-menu-watermark .MOONSHINE-main-menu-watermark-text {color:#bba6df;line-height:1.1;max-width:100%;overflow-wrap:anywhere;white-space:pre-wrap;}
+/* Owned foreground windows suppress the menu ornament without observers or layout reads. */
+body:has(#MOONSHINE-root [role="dialog"]:not([hidden]),#MOONSHINE-root[inert],.MOONSHINE-mods-panel) #MOONSHINE-main-menu-watermark {display:none;}
+
+/* b6.6 map round one: relocate information, preserve the existing node map. */
+#MOONSHINE-root.MOONSHINE-mode-stg-mobile-ui :is([data-ms-id="stg-mapscreen-root"],[data-ms-id="stg-stomach-root"],[data-ms-id="stg-lab-root"]) :is([data-ms-class~="mapscreen-title"],[data-ms-class~="map-legend-inline"],[data-ms-class~="stg-nearby-panel"]),
+#MOONSHINE-root.MOONSHINE-mode-stg-mobile-ui [data-ms-id="stg-root"] [data-ms-class~="header-floor-main"] {display:none !important;}
+#MOONSHINE-root#MOONSHINE-root :is([data-ms-id="stg-mapscreen-root"],[data-ms-id="stg-stomach-root"],[data-ms-id="stg-lab-root"]) [data-ms-class~="mapscreen-fixedtop"] {background:transparent !important;border:0 !important;box-shadow:none !important;backdrop-filter:none !important;pointer-events:none;padding:0 !important;}
+#MOONSHINE-root#MOONSHINE-root :is([data-ms-id="stg-mapscreen-root"],[data-ms-id="stg-stomach-root"],[data-ms-id="stg-lab-root"]) [data-ms-class~="mapscreen-header"] {padding:0 !important;min-height:0 !important;}
+#MOONSHINE-root#MOONSHINE-root :is([data-ms-id="stg-mapscreen-root"],[data-ms-id="stg-stomach-root"],[data-ms-id="stg-lab-root"]) [data-ms-class~="stg-mobile-top-hud"] {pointer-events:auto;}
+#MOONSHINE-root#MOONSHINE-root :is([data-ms-id="stg-mapscreen-root"],[data-ms-id="stg-stomach-root"],[data-ms-id="stg-lab-root"]) [data-ms-class~="mapscreen-body"] {padding-top:calc(var(--stg-mobile-pad-top) + 6px + clamp(50px,12.5vw,72px) + 60px) !important;}
+/* Preserve the Lab description below persistent HUD/location, not behind them. */
+#MOONSHINE-root#MOONSHINE-root [data-ms-id="stg-lab-root"] [data-ms-class~="lab-subtitle"] {position:absolute;top:calc((var(--ms-visual-top,0px) + max(10px,env(safe-area-inset-top,0px)) + clamp(36px,10vw,58px) + 8px + 42px + 12px) / var(--ms-native-scale,1));left:0;right:0;margin:0;padding:0 16px;font:italic 14px/1.35 var(--SYNODIC-font-ui);}
+#MOONSHINE-location-root {position:fixed;inset-inline-start:0;top:0;z-index:2147483647;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);pointer-events:none;box-sizing:border-box;font-family:var(--SYNODIC-font-ui);color:#aa91d4;}
+#MOONSHINE-location-root *,#MOONSHINE-location-root *::before,#MOONSHINE-location-root *::after {box-sizing:border-box;}
+.MOONSHINE-location-launcher {transition:none !important;grid-area:1/1;align-self:start;justify-self:start;margin-block-start:var(--hud-bottom,80px);margin-inline-start:var(--hud-left,14px);display:grid;place-items:center;width:42px;height:42px;padding:6px;border:1px solid #aa91d4;border-radius:50%;background:#30283d;color:inherit;pointer-events:auto;touch-action:manipulation;}
+.MOONSHINE-location-launcher[hidden] {display:none;}
+#MOONSHINE-location-root.MOONSHINE-location-suspended .MOONSHINE-location-launcher,
+body:has(#MOONSHINE-root[inert],#MOONSHINE-root [role="dialog"]:not([hidden]),#MOONSHINE-root [data-ms-id="stg-transition-veil"]) .MOONSHINE-location-launcher {visibility:hidden;pointer-events:none;}
+.MOONSHINE-symbol-slot {display:grid;place-items:center;width:26px;height:26px;}
+.MOONSHINE-symbol-slot svg {width:26px;height:26px;}
+.MOONSHINE-symbol-outlined {display:none;font:400 26px/1 "Material Symbols Outlined";font-feature-settings:"liga";font-variation-settings:'opsz' 24,'wght' 400,'FILL' 0,'GRAD' 0;letter-spacing:normal;text-transform:none;white-space:nowrap;direction:ltr;}
+.MOONSHINE-symbol-slot[data-ready="true"] svg {display:none;}
+.MOONSHINE-symbol-slot[data-ready="true"] .MOONSHINE-symbol-outlined {display:block;}
+.MOONSHINE-location-scrim {grid-area:1/1;display:grid;place-items:center;min-width:0;min-height:0;padding:max(16px,env(safe-area-inset-top)) max(24px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) max(24px,env(safe-area-inset-left));background:#000a;pointer-events:auto;}
+.MOONSHINE-location-panel {display:grid;grid-template-rows:auto minmax(0,1fr) auto;width:min(100%,480px);max-height:100%;min-width:0;min-height:0;border:1px solid #944aff;border-radius:26px;background:#322a40;overflow:hidden;}
+.MOONSHINE-location-header {padding:6px 12px 12px;text-align:center;overflow-wrap:anywhere;}
+.MOONSHINE-location-title {font-size:clamp(22px,6vw,30px);line-height:1.1;font-weight:700;color:#c5bbd6;margin:0 0 4px;}
+.MOONSHINE-location-place {font-size:clamp(20px,5.5vw,26px);line-height:1.25;font-weight:700;}
+.MOONSHINE-location-body {min-height:0;overflow:auto;overscroll-behavior:contain;}
+.MOONSHINE-location-section-title {margin:0;padding:0 14px 4px;font-size:clamp(20px,5.5vw,26px);line-height:1.25;font-weight:400;}
+.MOONSHINE-location-section-title[hidden],.MOONSHINE-location-legend[hidden] {display:none;}
+.MOONSHINE-location-legend {display:flex;flex-wrap:wrap;align-content:flex-start;gap:14px 16px;background:#222426;padding:14px;max-height:160px;overflow:auto;overscroll-behavior:contain;}
+.MOONSHINE-location-legend-item {display:flex;align-items:center;gap:8px;font-size:16px;line-height:1.3;min-width:0;}
+.MOONSHINE-location-legend-label {overflow-wrap:anywhere;}
+.MOONSHINE-location-legend-shape {flex:none;display:grid;place-items:center;width:22px;height:22px;}
+.MOONSHINE-location-legend-shape svg {max-width:100%;max-height:100%;}
+.MOONSHINE-location-nearby {padding:0 14px;}
+.MOONSHINE-location-giantess {min-width:0;padding:0 0 12px;}
+.MOONSHINE-location-identity {display:flex;gap:8px;align-items:center;min-width:0;}
+.MOONSHINE-location-portrait {width:60px;height:60px;object-fit:cover;border-radius:8px;flex:none;}
+.MOONSHINE-location-labels {min-width:0;overflow-wrap:anywhere;font-size:20px;line-height:1.25;}
+.MOONSHINE-location-subtitle {font-style:italic;}
+.MOONSHINE-location-stats {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:4px;}
+.MOONSHINE-location-stat {min-width:0;}
+.MOONSHINE-location-stat-label {font-size:20px;line-height:1.15;overflow-wrap:anywhere;}
+.MOONSHINE-location-hp-pill,.MOONSHINE-location-pill,.MOONSHINE-location-data {display:grid;grid-template-columns:minmax(0,1fr);min-width:0;min-height:32px;border:1px solid #aa91d4;border-radius:999px;overflow:hidden;}
+.MOONSHINE-location-hp-pill {grid-template-columns:minmax(0,1fr) minmax(0,1fr);}
+.MOONSHINE-location-hp-pill .MOONSHINE-location-number-cell:last-child {background:#aa91d4;color:#30283d;}
+.MOONSHINE-location-number-cell {display:grid;place-items:center;min-width:0;container-type:inline-size;padding:1px 5px;}
+.MOONSHINE-location-number {max-width:100%;font-family:var(--SYNODIC-font-mono);font-weight:700;font-size:min(24px,calc(100cqi / var(--digits,1) / .62));line-height:1.15;white-space:nowrap;}
+.MOONSHINE-location-data {width:100%;grid-template-columns:minmax(0,3fr) minmax(0,1fr);padding:0;background:transparent !important;color:#aa91d4;margin-top:8px;cursor:default;font:inherit;}
+.MOONSHINE-location-data .MOONSHINE-location-number-cell {background:transparent;color:#aa91d4;}
+.MOONSHINE-location-data-label {display:grid;place-items:center;background:#aa91d4;color:#30283d;padding:3px 8px;font-size:20px;line-height:1.1;overflow-wrap:anywhere;}
+.MOONSHINE-location-footer {display:grid;place-items:center;padding:4px 14px 8px;}
+.MOONSHINE-location-ok {display:grid;place-items:center;width:min(100%,174px);min-height:52px;border:1px solid #aa91d4;border-radius:999px;background:transparent;color:inherit;padding:8px 14px;font:400 20px/1.2 var(--SYNODIC-font-ui);overflow-wrap:anywhere;}
+.MOONSHINE-location-scrim[data-kind="combat"] .MOONSHINE-location-panel {grid-template-rows:auto auto;}
+.MOONSHINE-location-scrim[data-kind="combat"] .MOONSHINE-location-header {padding:10px 14px 24px;}
+
+body:has(#MOONSHINE-root.MOONSHINE-mode-stg-view-art-mode) .MOONSHINE-location-launcher {visibility:hidden;pointer-events:none;}
+
+/* Decorative native backgrounds are data sources; do not download behind the owned view. */
+body:has(#MOONSHINE-root) #passages :is(.menu-bg,.mapscreen-bg) {display:none !important;}
+
+/* Native character selection shakes document.body, moving fixed Loading UI.
+   Route that cue to an owned card; no second CSS replay of its copied class. */
+body:has(#MOONSHINE-root).stg-shake {animation:none !important;transform:none !important;}
+/* Even an identity body transform changes fixed chrome's containing block. */
+body:has(#MOONSHINE-root).stg-screen-shake,
+#MOONSHINE-root.MOONSHINE-mode-stg-screen-shake {animation:none !important;transform:none !important;}
+#MOONSHINE-root[data-ms-class~="stg-shake"] {animation:none !important;transform:none !important;}
+#MOONSHINE-root[data-ms-class~="stg-shake"] [data-ms-class~="stg-mobile-character-card"] {animation:none !important;}
+body:has(#MOONSHINE-scene-transition:not([hidden])) #MOONSHINE-root :is([data-ms-class~="stg-shaking"],[data-ms-class~="stg-shaking-centered"]),
+html:has(#MOONSHINE-loading:not([hidden])) #MOONSHINE-root :is([data-ms-class~="stg-shaking"],[data-ms-class~="stg-shaking-centered"]) {animation-play-state:paused !important;}
+
+/* Persistent game chrome: sole suspension flag written by presentation owner. */
+#MOONSHINE-root#MOONSHINE-root :is(#MOONSHINE-scene,#MOONSHINE-persistent-chrome) {display:contents !important;}
+/* MAP scroll belongs to its bounded map viewport, never the whole chrome. */
+#MOONSHINE-root#MOONSHINE-root[data-presentation-mode="MAP"] {overflow:clip !important;}
+#MOONSHINE-root#MOONSHINE-root[data-presentation-mode="MAP"] :is([data-ms-id="stg-mapscreen-root"],[data-ms-id="stg-stomach-root"],[data-ms-id="stg-lab-root"]) {min-height:0 !important;max-height:calc((var(--stg-mobile-vh,100dvh) - var(--ms-visual-top,0px) - max(80px,env(safe-area-inset-top,0px)) - env(safe-area-inset-bottom,0px)) / var(--ms-native-scale,1)) !important;overflow-y:auto !important;overscroll-behavior:contain;}
+#MOONSHINE-root #MOONSHINE-persistent-chrome [data-ms-suspended] {visibility:hidden !important;opacity:0 !important;pointer-events:none !important;}
+#MOONSHINE-root[data-presentation-mode="SCENE_TRANSITION"] #MOONSHINE-scene,
+#MOONSHINE-root[data-presentation-mode="SYSTEM_LOADING"] #MOONSHINE-scene {visibility:hidden !important;pointer-events:none !important;}
+/* Old native-derived controls remain sources in LUNAR, never second chrome. */
+#MOONSHINE-scene :is([data-ms-class~="arc-dlg-opts"],[data-ms-class~="enc-choices"],[data-ms-class~="ev-choices"],[data-ms-class~="blessing-actions"],[data-ms-class~="blessing-choices"],[data-ms-class~="blessing-title"],[data-ms-class~="body-senses-row"],[data-ms-class~="body-exit-btn"],[data-ms-class~="enc-collapse-btn"]) {display:none !important;}
+#MOONSHINE-persistent-chrome [data-ms-class~="stg-story-status-glyph"] {font-size:18px;line-height:1;}
+#MOONSHINE-persistent-chrome [data-ms-class~="stg-story-actions"][hidden] {display:none !important;}
+#MOONSHINE-persistent-chrome button:disabled {opacity:.4;}
+
+#MOONSHINE-scene [data-ms-id="stg-view-art-btn"] {display:none !important;}
+#MOONSHINE-root:has(#MOONSHINE-persistent-chrome) #MOONSHINE-scene [data-ms-id="stg-upgrade-root"] :is([data-ms-class~="blessing-content"],[data-ms-class~="blessing-actions"]) {display:none !important;}
+
+/* Persistent chrome sits above scene foreground, below existing modal windows. */
+#MOONSHINE-root #MOONSHINE-top-hud,#MOONSHINE-root #MOONSHINE-story-box {z-index:1000 !important;}
+
+/* Owned HUD geometry: one compact proportion across passage/phone profiles.
+   Safe areas belong to the viewport, not the old native header's padding. */
+#MOONSHINE-root#MOONSHINE-root #MOONSHINE-top-hud {
+  --ms-chrome-hud-size:clamp(36px,10vw,58px);
+  top:calc(var(--ms-visual-top,0px) + max(10px,env(safe-area-inset-top,0px))) !important;
+  left:max(2vw,env(safe-area-inset-left,0px)) !important;
+  right:max(2vw,env(safe-area-inset-right,0px)) !important;
+  height:var(--ms-chrome-hud-size) !important;
+  grid-template-columns:calc(var(--ms-chrome-hud-size) * .74) minmax(0,1fr) calc(var(--ms-chrome-hud-size) * .74);
+  gap:calc(var(--ms-chrome-hud-size) * .12) !important;
+  padding:calc(var(--ms-chrome-hud-size) * .08) calc(var(--ms-chrome-hud-size) * .12) !important;
+}
+#MOONSHINE-root#MOONSHINE-root #MOONSHINE-top-hud :is([data-ms-chrome-control="info"],[data-ms-chrome-control="menu"]) {
+  width:calc(var(--ms-chrome-hud-size) * .74) !important;
+  height:calc(var(--ms-chrome-hud-size) * .74) !important;
+  border-width:calc(var(--ms-chrome-hud-size) * .03) !important;
+  font-size:calc(var(--ms-chrome-hud-size) * .464) !important;
+}
+#MOONSHINE-root#MOONSHINE-root #MOONSHINE-top-hud [data-ms-chrome-control="menu"]::after {font-size:calc(var(--ms-chrome-hud-size) * .424) !important;}
+#MOONSHINE-root#MOONSHINE-root #MOONSHINE-top-hud [data-ms-class~="stg-mobile-top-hud-stats"] {gap:calc(var(--ms-chrome-hud-size) * .096);}
+#MOONSHINE-root#MOONSHINE-root #MOONSHINE-top-hud [data-ms-class~="stg-mobile-top-hud-stats"] > * {height:calc(var(--ms-chrome-hud-size) * .632);border-width:calc(var(--ms-chrome-hud-size) * .03);}
+#MOONSHINE-root#MOONSHINE-root #MOONSHINE-top-hud [data-ms-class~="stg-mobile-top-hud-hp-label"] {font-size:calc(var(--ms-chrome-hud-size) * .368) !important;}
+#MOONSHINE-root#MOONSHINE-root #MOONSHINE-top-hud [data-ms-class~="stg-mobile-top-hud-glyph"] {font-size:calc(var(--ms-chrome-hud-size) * .424) !important;}
+#MOONSHINE-root#MOONSHINE-root #MOONSHINE-top-hud [data-ms-class~="stg-mobile-top-hud-alignment"] [data-ms-class~="stg-mobile-top-hud-glyph"] {font-size:calc(var(--ms-chrome-hud-size) * .464) !important;}
+#MOONSHINE-root#MOONSHINE-root #MOONSHINE-top-hud :is([data-stg-hud-value="hp"],[data-stg-hud-value="data"]) {font-size:calc(var(--ms-chrome-hud-size) * .536) !important;padding-top:calc(var(--ms-chrome-hud-size) * .04);}
+#MOONSHINE-root#MOONSHINE-root #MOONSHINE-top-hud [data-ms-class~="stg-mobile-top-hud-align-values"] > span {font-size:calc(var(--ms-chrome-hud-size) * .328) !important;padding-bottom:calc(var(--ms-chrome-hud-size) * .032);}
+
+/* The bounded Lab map must not paint over its fixed full-viewport background. */
+#MOONSHINE-root#MOONSHINE-root[data-presentation-mode="MAP"] [data-ms-id="stg-lab-root"] {background:transparent !important;}
+
+#MOONSHINE-root #MOONSHINE-story-choice-background {position:absolute;inset:0;z-index:900;pointer-events:none;background-size:cover;background-position:center;}
+#MOONSHINE-story-choice-background[data-ms-vignette]::after {content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 36%,rgba(0,0,0,.80) 100%);pointer-events:none;}
+.MOONSHINE-story-background-shade{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to bottom,rgba(14,10,20,.45) 0%,rgba(14,10,20,.75) 60%,#0e0a14 100%);opacity:var(--stg-bgi-gradient-scale,1) !important;animation:none !important;transition:none !important;}
+#MOONSHINE-root:has(#MOONSHINE-story-choice-background[data-ms-vignette]) #MOONSHINE-scene {visibility:hidden;pointer-events:none;}
+#MOONSHINE-root [data-ms-story-choice] {white-space:pre-line;overflow-wrap:anywhere;}
+
+#MOONSHINE-root #MOONSHINE-story-box:has([data-ms-story-choice]) [data-ms-class~="arc-dlg-name"] {text-transform:none !important;}
+
+/* Reuse the combat half-filled capsule in the persistent story heading. */
+#MOONSHINE-root#MOONSHINE-root #MOONSHINE-story-box [data-ms-class~="stg-story-head"]{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 8px;}
+#MOONSHINE-root#MOONSHINE-root #MOONSHINE-story-box [data-ms-class~="stg-story-head"]>[data-ms-class~="arc-dlg-name"]{flex:1;min-width:3ch;overflow-wrap:anywhere;}
+#MOONSHINE-root#MOONSHINE-root :is(.MOONSHINE-story-hp,.MOONSHINE-story-love){flex:none;font:600 clamp(14px,4vw,22px)/1.1 var(--SYNODIC-font-mono);}
+#MOONSHINE-root#MOONSHINE-root .MOONSHINE-story-hp{--combat-purple:#ad95d4;color:#ad95d4;}
+#MOONSHINE-root#MOONSHINE-root .MOONSHINE-story-love{--combat-purple:#91c8fc;--combat-blue:#91c8fc;flex:none;font:600 clamp(14px,4vw,22px)/1.1 var(--SYNODIC-font-mono);}
+#MOONSHINE-root#MOONSHINE-root :is(.MOONSHINE-story-hp,.MOONSHINE-story-love)[hidden]{display:none;}
+#MOONSHINE-root#MOONSHINE-root :is(.MOONSHINE-story-hp,.MOONSHINE-story-love) .MOONSHINE-combat-capsule{flex:none;min-width:6ch;}
+#MOONSHINE-root#MOONSHINE-root :is(.MOONSHINE-story-hp,.MOONSHINE-story-love) :is(.MOONSHINE-combat-value,.MOONSHINE-combat-maximum){padding:0 .35ch;}

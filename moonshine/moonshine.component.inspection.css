@@ -1,0 +1,14 @@
+/* Same black / purple Mono skin as ordinary CG; normal-flow image and footer. */
+.MOONSHINE-inspection {grid-area:1 / 1;z-index:1;min-width:0;min-height:0;display:grid;grid-template-rows:minmax(0,1fr) auto;background:#000;pointer-events:auto;color:#ab92d2;overflow:hidden;overscroll-behavior:none;}
+.MOONSHINE-inspection-viewport {min-width:0;min-height:0;overflow:scroll;overscroll-behavior:contain;touch-action:pan-x pan-y pinch-zoom;scrollbar-width:none;}
+.MOONSHINE-inspection-viewport::-webkit-scrollbar {display:none;}
+.MOONSHINE-inspection-stage {display:grid;place-items:center;min-width:100%;min-height:100%;}
+.MOONSHINE-inspection-image {display:block;max-width:none;max-height:none;object-fit:contain;user-select:none;}
+.MOONSHINE-inspection-fallback {margin:16px;color:#ab92d2;text-align:center;font:400 16px/1.4 var(--SYNODIC-font-mono);}
+.MOONSHINE-inspection-footer {display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px;padding:8px max(12px,env(safe-area-inset-right)) max(8px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left));min-width:0;}
+.MOONSHINE-inspection-controls {display:flex;align-items:center;gap:8px;justify-self:end;}
+#MOONSHINE-scan-root .MOONSHINE-inspection button {position:static;display:grid;place-items:center;min-width:0;min-height:30px;padding:0 10px;border:1px solid #ab92d2;border-radius:999px;background:#30283d;color:#ab92d2;font:400 20px/1 var(--SYNODIC-font-mono);box-sizing:border-box;box-shadow:none;transition:none;}
+#MOONSHINE-scan-root .MOONSHINE-inspection :is(.MOONSHINE-inspection-minus,.MOONSHINE-inspection-plus) {width:30px;padding:0;aspect-ratio:1;}
+#MOONSHINE-scan-root .MOONSHINE-inspection-fit {min-width:68px;}
+.MOONSHINE-inspection-return {justify-self:start;}
+#MOONSHINE-scan-root .MOONSHINE-inspection button:disabled {opacity:.5;cursor:default;}
