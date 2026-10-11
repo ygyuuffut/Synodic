@@ -1,0 +1,31 @@
+/* Isolated native/browser controls; no CDN, rewritten native bodies or shipped probes. */
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),{chromium}=require('playwright');
+const root=require('./helpers/synodic-test-paths.cjs').root,out=process.env.FOCUS_OUTPUT||path.join(root,'builds/perf-focus-b69-2026-10-10/lifecycle');fs.mkdirSync(out,{recursive:true});
+const native=fs.readFileSync(path.join(root,'../STG 0.2m-b5.html'),'utf8');
+function exact(name){const start=native.indexOf('window.'+name+'=function')>=0?native.indexOf('window.'+name+'=function'):native.indexOf('window.'+name+' = function');assert(start>=0,name);return native.slice(start,native.indexOf('\n};',start)+4);}
+const functions=exact('stgPlayAudioTracked')+'\n'+exact('stgFateWelcomeFlash'),pause=fs.readFileSync(path.join(root,'lunar/lunar.bridge.pause.cjs'),'utf8');
+const wav=Buffer.alloc(44+3200);wav.write('RIFF');wav.writeUInt32LE(wav.length-8,4);wav.write('WAVEfmt ',8);wav.writeUInt32LE(16,16);wav.writeUInt16LE(1,20);wav.writeUInt16LE(1,22);wav.writeUInt32LE(8000,24);wav.writeUInt32LE(16000,28);wav.writeUInt16LE(2,32);wav.writeUInt16LE(16,34);wav.write('data',36);wav.writeUInt32LE(3200,40);
+const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+a2ioAAAAASUVORK5CYII=','base64');
+const report={date:'2026-10-10',notes:['Native function bodies copied verbatim from accepted b5. Minimal roots/globals are fixture, not a full game or Android test.','WeakRef-only tracking; test-only GC is not production cleanup. Browser heap/DOM counters do not measure GPU.'],audio:[],images:[],errors:[]};
+(async()=>{const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});try{report.browser=await browser.version();
+ for(const core of [false,true])for(const valid of [false,true]){
+  const page=await browser.newPage();page.on('pageerror',e=>report.errors.push(e.message));await page.route('http://fixture.test/**',r=>r.fulfill(valid?{status:200,contentType:'audio/wav',body:wav}:{status:204,body:''}));
+  await page.setContent('<button id="start">start</button><div id="stg-stomach-fate-root"></div>');
+  await page.evaluate(()=>{window.LUNAR={bridge:{port:{emit(){},revision(){}}}};window.STG_UNLOCKED=true;window.STG_VOLUME_SFX=1;window.STG_SOUNDS={avery_stomach_taunt:'http://fixture.test/voice.wav'};window.STG_AVERY_WELCOME_MS=3400;window.stgSfxSilent=()=>false;window.finished=0;window.audioWeak=[];window.ovWeak=[];const AudioOriginal=Audio;window.Audio=function(url){const a=new AudioOriginal(url);audioWeak.push(new WeakRef(a));return a;};});
+  if(core)await page.addScriptTag({content:pause});await page.addScriptTag({content:functions});
+  await page.evaluate(()=>document.getElementById('start').onclick=()=>{for(let i=0;i<8;i++)stgFateWelcomeFlash(()=>finished++);document.querySelectorAll('.fate-welcome-ov').forEach(e=>ovWeak.push(new WeakRef(e)));});
+  await page.click('#start');const cdp=await page.context().newCDPSession(page);
+  await page.waitForTimeout(4500);await cdp.send('HeapProfiler.collectGarbage');await page.waitForTimeout(100);
+  const measure=()=>page.evaluate(()=>({finished,connected:document.querySelectorAll('.fate-welcome-ov').length,retainedAudio:audioWeak.filter(w=>w.deref()).length,retainedOverlay:ovWeak.filter(w=>w.deref()).length,paused:window.LUNAR.bridge.pause?LUNAR.bridge.pause.active():false}));
+  const first=await measure();await page.waitForTimeout(11000);await cdp.send('HeapProfiler.collectGarbage');await page.waitForTimeout(100);const late=await measure();
+  assert.equal(late.finished,8);assert.equal(late.connected,0);assert.equal(late.paused,false);
+  let chunks=[];cdp.on('HeapProfiler.addHeapSnapshotChunk',x=>chunks.push(x.chunk));await cdp.send('HeapProfiler.takeHeapSnapshot',{reportProgress:false});fs.writeFileSync(path.join(out,`audio-${core?'pause':'native'}-${valid?'valid':'204'}.heapsnapshot`),chunks.join(''));chunks=[];
+  report.audio.push({core,valid,at4_6s:first,at15_7s:late,dom:await cdp.send('Memory.getDOMCounters')});console.log('AUDIO',JSON.stringify(report.audio.at(-1)));await page.close();fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2));
+ }
+ const page=await browser.newPage();const cdp=await page.context().newCDPSession(page);await cdp.send('Performance.enable');await page.route('http://fixture.test/**',r=>r.fulfill({status:200,contentType:'image/png',body:png}));await page.setContent('<p>Browser-only Image control</p>');await page.evaluate(()=>window.imageWeak=[]);
+ for(let batch=0;batch<4;batch++){
+  await page.evaluate(async()=>{for(let i=0;i<20;i++){let img=new Image();img.decoding='async';img.src='http://fixture.test/art.png';await img.decode();imageWeak.push(new WeakRef(img));img.removeAttribute('src');img=null;}});
+  await page.waitForTimeout(30000);await cdp.send('HeapProfiler.collectGarbage');await page.waitForTimeout(100);const state=await page.evaluate(()=>({created:imageWeak.length,retained:imageWeak.filter(w=>w.deref()).length,connected:document.images.length}));report.images.push({label:'batch-'+(batch+1),...state,dom:await cdp.send('Memory.getDOMCounters')});console.log('IMAGES',JSON.stringify(report.images.at(-1)));fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2));
+ }
+ await page.waitForTimeout(60000);await cdp.send('HeapProfiler.collectGarbage');await page.waitForTimeout(100);report.images.push({label:'idle60s',...await page.evaluate(()=>({created:imageWeak.length,retained:imageWeak.filter(w=>w.deref()).length,connected:document.images.length})),dom:await cdp.send('Memory.getDOMCounters')});let chunks=[];cdp.on('HeapProfiler.addHeapSnapshotChunk',x=>chunks.push(x.chunk));await cdp.send('HeapProfiler.takeHeapSnapshot',{reportProgress:false});fs.writeFileSync(path.join(out,'browser-images.heapsnapshot'),chunks.join(''));assert.deepEqual(report.errors,[]);console.log('PASS isolated native audio + browser image lifecycle controls');
+ }finally{fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2));await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

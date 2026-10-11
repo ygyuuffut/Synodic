@@ -1,0 +1,26 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
+const context={Map};context.window=context;vm.createContext(context);
+for(const name of ['lunar.buffer.store','lunar.adapter.data','lunar.adapter.story_actions','lunar.buffer.game','lunar.buffer.story','lunar.buffer.shop','lunar.buffer.actions','lunar.buffer.exchange','lunar.bridge.interfaces']){if(name==='lunar.bridge.interfaces')context.LUNAR.logger=require('./helpers/logger-stub.cjs')();vm.runInContext(fs.readFileSync(path.join(__dirname,'..','lunar',name+'.cjs'),'utf8'),context);}
+const B=context.window.LUNAR.buffer;
+const A=context.LUNAR.adapter.storyActions;
+assert.equal(A.label('◂ Go back ▶'),'Go back');
+assert.equal(A.labelHtml('<span><b>◂ Go back</b></span>'),'<span><b>Go back</b></span>');
+assert.equal(A.labelHtml('<b>Choice A → Choice B</b> ▶'),'<b>Choice A → Choice B</b>');
+assert.equal(A.hasContent('<br><span>&nbsp;</span>'),false);assert.equal(A.hasContent('<b style="color:red">Next line</b>'),true);assert.equal(A.hasContent('<img src="scene.png">'),true);
+let calls=0;B.setScope('run-1');
+const first=B.shop.freeze('point-1','merlin',()=>({offers:[{id:'A',price:++calls}]}));
+assert.equal(B.shop.freeze('point-1','merlin',()=>({offers:[{id:'B',price:++calls}]})).offers[0].price,1);assert.equal(calls,1);
+first.offers[0].price=999;assert.equal(B.shop.read('point-1','merlin').offers[0].price,1);
+const id=B.story.enqueue('scene','<b style="color:red">Unshown text</b>',{paragraph:1});
+B.presentation.write('active',[]);B.presentation.invalidate('active');assert.equal(B.story.pending()[0].html,'<b style="color:red">Unshown text</b>');
+B.story.acknowledge(id);assert.equal(B.story.pending().length,0);
+context.LUNAR.bridge.interfaces.register('game.test',n=>n+1,{source:'unit'});assert.equal(context.LUNAR.bridge.interfaces.call('game.test',2),3);
+assert.equal(context.LUNAR.bridge.interfaces.describe('game')[0].source,'unit');
+const state={player:{hp:42},cards:[{id:'card'}]};state.loop=state;state.callback=()=>0;const converted=context.LUNAR.adapter.data.snapshot(state);assert.equal(converted.player.hp,42);assert.equal(converted.cards[0].id,'card');assert.equal(converted.loop,undefined);assert.equal(converted.callback,undefined);
+const group=B.actions.group('initial:point-1',()=>({offers:[{id:'A',price:0}],selected:null,completed:false}));
+group.offers[0].price=999;assert.equal(B.actions.group('initial:point-1').offers[0].price,0);
+B.actions.update('initial:point-1',{selected:'A'});B.actions.publish({upgrade:B.actions.group('initial:point-1')});B.presentation.invalidate('active');
+assert.equal(B.actions.group('initial:point-1').selected,'A');assert.equal(B.actions.group('initial:point-1').completed,false);
+const staged=B.actions.read();staged.upgrade.completed=true;assert.equal(B.actions.group('initial:point-1').completed,false);
+B.setScope('run-2');assert.equal(B.shop.read('point-1','merlin'),undefined);assert.equal(B.story.pending().length,0);assert.equal(B.actions.group('initial:point-1'),undefined);assert.equal(B.actions.read(),undefined);
+console.log('PASS buffered immutable offers, pending rich text lifetime, interface routing and run isolation');

@@ -1,0 +1,11 @@
+/* Native threshold semantics, status normalization and read-only conversion. */
+const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
+const env={LUNAR:{adapter:{}}};env.window=env;vm.createContext(env);vm.runInContext(fs.readFileSync(path.join(__dirname,'../lunar/lunar.adapter.combat.cjs'),'utf8'),env);const a=env.LUNAR.adapter.combat,plain=x=>JSON.parse(JSON.stringify(x));
+const g={turn:5,player:{hp:50,maxHp:50,love:0,statuses:{weak:2,stuck:3,analyzed:1,str:4},calm:2},enemy:{hp:310,maxHp:350,combatStartHp:350,love:9,escapeAtDmg:60,statuses:{vuln:9}},_loveEscapeAt:30,_playerDmgFloor:13},before=JSON.stringify(g);
+assert.deepEqual(plain(a.objectives(g)),[{id:'love',label:'Love Threshold',required:30,current:9,kind:'love'},{id:'damage',label:'Attack Threshold',required:60,current:40,kind:'damage'},{id:'relent',label:'Relent Threshold',required:13,current:50,kind:'relent'}]);assert.equal(JSON.stringify(g),before);
+const rows=plain(a.statuses(g.player));assert.equal(rows.find(r=>r.id==='weak').kind,'debuff');assert.equal(rows.find(r=>r.id==='str').name,'Heat');assert.equal(rows.find(r=>r.id==='calm').amount,2);
+g._graceBoss=true;g.enemy.graceAi={target:90,devourReady:false};assert.equal(a.objectives(g)[0].required,90);g._averyPussy=true;assert.equal(a.objectives(g).find(r=>r.id==='player-love').required,45);g.enemy.roundLimit={rounds:6};assert.equal(a.objectives(g).find(r=>r.id==='turns').current,5);g._stuckWinActive=true;assert.equal(a.objectives(g).find(r=>r.id==='stuck').current,3);
+assert.equal(a.withoutEmoji('⚔️ Strike 3 + 💘 Love 2'),'Strike 3 +  Love 2');assert.equal(a.counter({hp:-3,maxHp:50}).hp,0);
+console.log('PASS combat read-only thresholds, phase target, relent HP floor, turn/Stuck limits, status kinds and intent emoji removal');
+
+const bars=[{kind:'data',label:'Gain 2 Data'},{kind:'grace',label:'+1 Grace claimed'},{kind:'chaos',label:''}],barsBefore=JSON.stringify(bars);const rewards=a.result({id:'one',outcome:'win',title:'Won',quote:'<em>quote</em>'},bars);assert.deepEqual(Array.from(rewards.rewards,r=>r.amount),[2,1,0]);assert.equal(rewards.schema,1);assert.equal(JSON.stringify(bars),barsBefore);console.log('PASS result amounts normalize native labels, missing zero and readonly input');
